@@ -11,11 +11,10 @@
 9. Navigating to another part of the site without confirming your reservation generates a prompt notifiying the user their chosen slot will be lost.
 
 ## Test environment setup and execution
-
-(Test(s) were built for Selenium's ChromeDriver and WebDriver, Version 97.0.4692.71.)
+(Test(s) were built using ChromeDriver and WebDriver, Version 97.0.4692.71.)
 
 Steps:
 1. Chrome needs to be installed, and the version needs be Version 97.0.4692.71 (if using the exe and DLLs I've included).
 2. Enable Powershell script execution if needed (Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass).
-3. Run *First_Run.ps1* to add the ChromeDriver location to your system PATH.
-4. Run *scripts/Validate-SchedulerScreen.ps1*.
+3. Right-click and Run *First_Run.ps1* with Powershell. If errors happen, you may need to run it as administrator the first time.
+4. Log files are located alongside each script, and are named the same.
