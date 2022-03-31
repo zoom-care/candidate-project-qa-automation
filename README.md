@@ -43,3 +43,51 @@ What we're looking for:
 - You have a clear vision for how to automate (using POM or Screenplay methodology, BDD or TDD best practices, etc.)
 - You know how to get the results you need (knowledge of the framework(s) and libraries chosen, and using their functionality appropriately)
 - Working code is good. Pretty working code is better. Fast, pretty, working code is best.
+
+
+## Explanation of the Project 
+
+Project structure 
+Pages folder-  Within the pages folder, i have page elements.
+runner- from this folder, I have 
+
+/*Runner is used to run the feature files(Test Cases)
+*@RunWith   : This makes the class runnable.
+*@CucumberOptions :
+* -add path of features folder and step definitions folder,
+* -tags
+* -dryRun
+* -Report plugins
+* -failedRunner plugin
+* ----------------
+* What is the role of ?
+* -features : path of features folder.
+* -glue     : path of step definitions folder
+* -tags     : to run individual or multiple features or scenarios
+* For example, if i pass same tag to multiple feature, then all features with that tag will run
+* -dryRun   : to check if there is any missing step definition(JAVA code)
+*           : dryRun can be true or false
+*           : dryRun = false default behaviour. Runs the test on hte browser while checking the missing steps
+*           : dryRun = true do not run tests on the browser and check if there is any missing step definition
+* */
+
+stepdefinitions folder-i have the methods for the specific scenarios.
+utilities folder- it does contain Driver class and ConfigurationReader class, they spececified 
+specific driver structures that I need to run my test browsers for example Google Chrome, Edge,etc.
+resources package-it does contain the features folder to hold all the feature files.
+
+## How to run the project
+
+We can run out individual testcases either from the feature file or from the runner class 
+by adding a tag for the specific feature.
+In addition to this, if you need to run entire testcases as a smoke test, simply what 
+I did was to add a @smoke test in each feature file and then have the same tage placed
+within the runner class to run the entire testcases.  
+
+I have created my testcase separately from an Excel sheet. 
+Those testcases are placed and specified from each feature to be given specific 
+description. However, if you need the Excel sheet, I could possibly provide directly.
+Also, if you look at each feature file, I add a specific description for the testcases.  
+
+
+

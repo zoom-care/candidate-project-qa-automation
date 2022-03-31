@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="90.01">
+    <testcase classname="login_page" name="tc_001" time="6.106">
+        <system-out><![CDATA[Given user gets on the schedule page........................................passed
+And user clicks on the loginButton..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Video_Care_tab" name="tc_002" time="8.092">
+        <system-out><![CDATA[Given User will navigate to the schedule page...............................passed
+And when users click on the ChatCare........................................passed
+And user should be able to redirect to the Log in page......................passed
+And user sends "abc@gmail.com" and "123mazda"...............................passed
+Then user verifies unable to sign in information............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="illness inJury" name="tc_003" time="5.916">
+        <system-out><![CDATA[Given user gets on the schedule page........................................passed
+And users on the illness section............................................passed
+And user chooses Orthopedics................................................passed
+Then user verifies the Orthopedics sign.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="clicks Need help sign in" name="tc_004" time="7.201">
+        <system-out><![CDATA[Given user gets on the schedule page........................................passed
+And clicks on myvisit button................................................passed
+And user clicks on Need help sign in option.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Help clickable button" name="tc_005" time="24.371">
+        <system-out><![CDATA[Given user gets on the schedule page........................................passed
+And users click on showMore button..........................................passed
+And user clicks on nine fifteen AM appointment..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Orthopedics Appointment" name="tc-006" time="15.873">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;react-mount-page-content&quot;]/div/div/div/div[1]/div/div[2]/div[3]/div/div[2]/div/div[1]/div[2]/div[2]/svg/g/g&quot;}&#10;  (Session info: chrome=99.0.4844.84)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'DESKTOP-LBGE3OO', ip: '192.168.1.116', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [caca5c7bb9921615491eff7cfccae6b1, findElement {using=xpath, value=//*[@id=&quot;react-mount-page-content&quot;]/div/div/div/div[1]/div/div[2]/div[3]/div/div[2]/div/div[1]/div[2]/div[2]/svg/g/g}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\hozde\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56218}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56218/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: caca5c7bb9921615491eff7cfccae6b1" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user gets on the schedule page........................................passed
+And users on the illness section............................................passed
+And user chooses Orthopedics................................................passed
+And user click on the calender..............................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="react-mount-page-content"]/div/div/div/div[1]/div/div[2]/div[3]/div/div[2]/div/div[1]/div[2]/div[2]/svg/g/g"}
+  (Session info: chrome=99.0.4844.84)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'DESKTOP-LBGE3OO', ip: '192.168.1.116', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [caca5c7bb9921615491eff7cfccae6b1, findElement {using=xpath, value=//*[@id="react-mount-page-content"]/div/div/div/div[1]/div/div[2]/div[3]/div/div[2]/div/div[1]/div[2]/div[2]/svg/g/g}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\hozde\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56218}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56218/devtoo..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: caca5c7bb9921615491eff7cfccae6b1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at stepdefinitions.ScheduleStepDefs.user_click_on_the_calender(ScheduleStepDefs.java:134)
+	at ✽.user click on the calender(file:///C:/Users/hozde/IdeaProjects/candidate-project-qa-automation/./src/test/resources/features/US_006.feature:8)
+]]></failure>
+    </testcase>
+    <testcase classname="Verifying the Accepted insurers" name="tc_007" time="11.809">
+        <system-out><![CDATA[Given user gets on the schedule page........................................passed
+And user clicks on the dollar sign..........................................passed
+And user clicks on the More Info............................................passed
+And user clicks on the See Accepted Insurance...............................passed
+Then user verifies Yes_ZoomCARE_Insurance...................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Confirmation_button" name="tc_008" time="10.399">
+        <system-out><![CDATA[Given user gets on the schedule page........................................passed
+And user clicks on the loginButton..........................................passed
+And user clicks on the signup button........................................passed
+And user inputs username and password.......................................passed
+And user place firstname lastname Mobilenumber Address zip birthday Gender..passed
+Then user verifies does this look right sign................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
