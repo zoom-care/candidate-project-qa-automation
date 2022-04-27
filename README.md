@@ -16,7 +16,7 @@ Specifically:
 3. Use the Test Cases section in the README file to write all of your test cases in response to the first part.
 4. Set up an automation framework and its associated pages/specs/utilities/etc within the repository.
 5. Use the Automation Instructions section in the README to provide instructions for how to set up the framework. Assume the user has nothing pre-installed and also does not know how to use the framework you chose.
-7. Create a Pull Request back to the original project.
+6. Create a Pull Request back to the original project.
 
 ## Prompt
 
