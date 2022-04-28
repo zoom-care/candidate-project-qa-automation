@@ -5,3 +5,6 @@
 /.vs/VSWorkspaceState.json
 /.vs/slnx.sqlite
 /.vs/candidate-project-qa-automation/v17/.suo
+/SchedulerTests/SchedulerTests/bin/Debug/net6.0
+/SchedulerTests/SchedulerTests/obj
+/SchedulerTests/.vs/SchedulerTests
