@@ -68,47 +68,11 @@ namespace SchedulerTests.TestCases
             // Verify Chat Care button.
             schedulerPage.ClickVirtualCare("chatcare");
             schedulerPage.VerifyChatCareTakesToLoginPage();
-        }
+        }       
 
         [TestMethod]
         [TestCategory("Smoke")]
-        [Description("This test verifies the Appointment Scheduling if time slot is available or not for Illness/Injury Clinic care.")]
-        public void VerifyClinicCareAppointmentScheduling()
-        {
-            schedulerPage.GoToPage(TestUtilities.ApplicationUri);
-
-            // Verify if schedule appointment time is present.
-            if(schedulerPage.IsAppointmentButtonPresent())
-            {
-                // Verify click on time slot takes you to log in page.
-                schedulerPage.ClickAppointmentButton();                
-                TestUtilities.GoBack();
-
-                //Verify Cancel appointment alert.
-                schedulerPage.VerifyCancelAppointmentAlert();
-                schedulerPage.ClickNoButton();                
-                TestUtilities.GoBack();
-
-                schedulerPage.ClickAppointmentButton();
-                TestUtilities.GoBack();
-                schedulerPage.ClickCancelVisitButton();
-                schedulerPage.VerifyCareSelectorAndService(UIConstants.IllnessInjury, UIConstants.IllnessInjury_ServiceLine);
-            }
-            else if(schedulerPage.NextAvailableDatePresent())
-            {
-                // Verify if next avaialbe date is present.
-                schedulerPage.ClickOnNextAvailableDate();
-            }
-            else
-            {
-                // Verify clinic not in area.
-                schedulerPage.VerifyNotInArea();
-            }
-        }
-
-        [TestMethod]
-        [TestCategory("Smoke")]
-        [Description("This test verifies the Provider details for one Provider.")]
+        [Description("This test verifies the Provider details and clicks on the time to book an appointment.")]
         [DynamicData(nameof(GetProviderDetails), DynamicDataSourceType.Method)]
         public void VerifyProviderDetailsAndScheduleAppointment(ProviderDto provider)
         {
@@ -122,6 +86,7 @@ namespace SchedulerTests.TestCases
                 schedulerPage.IsAddressMapPresent();
                 schedulerPage.VerifyProviderDetails();
                 schedulerPage.VerifyDateAndAppointment(provider);
+
                 // Verify if schedule appointment time is present.
                 if (schedulerPage.IsAppointmentButtonPresent())
                 {

@@ -1,17 +1,14 @@
 ﻿using FluentAssertions;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SchedulerUIAutomationTests.Models;
 using SchedulerUIAutomationTests.Utilities;
-using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchedulerTests.PageObjects
 {
+    // This partial class contains all data for Care Selector.
     public partial class SchedulerPage
     {
         private IWebDriver _driver;
@@ -76,6 +73,7 @@ namespace SchedulerTests.PageObjects
         }
     }
 
+    // This partial class contains all data for Virtual Care Buttons.
     public partial class SchedulerPage
     {      
         public IWebElement ChatVideoRow => _driver.FindElement(By.XPath("//div[@data-testid='ChatVideoRow']"));
@@ -141,16 +139,13 @@ namespace SchedulerTests.PageObjects
         }
     }
 
+    // This partial class contains all data for Appointments.
     public partial class SchedulerPage
     {
         public IWebElement AppointmentTimeButton => _driver.FindElement(By.XPath("//*[contains(@data-testid,'button-ServiceLine.1.Clinic.1.Provider.1.TimeSlot.1')]"));
         public IWebElement SignUpButton => _driver.FindElement(By.Id("sign_up_button-loginModal.register.signUp"));
         public IWebElement NotInAreaLabel => _driver.FindElement(By.XPath("//*[contains(@data-testid,'text-We're not in your area')]"));
-        public IWebElement AreYouSureAlert => _driver.FindElement(By.XPath("//div[@data-testid='pretty-alert']"));
-        public IWebElement AreYouSureLabel => _driver.FindElement(By.XPath("//div[@data-testid='text-pretty-alert-title']"));
-        public IWebElement NoButton => _driver.FindElement(By.XPath("//div[@data-testid='button-pretty-alert-button-No']/div"));
-        public IWebElement CancelVisitButton => _driver.FindElement(By.XPath("//div[@data-testid='button-pretty-alert-button-Cancel Visit']/div"));
-        public IWebElement NextAvailableDate => _driver.FindElement(By.XPath("//div[@data-testid='button-ServiceLine.1.Clinic.1.EmptyState']/div"));
+         public IWebElement NextAvailableDate => _driver.FindElement(By.XPath("//div[@data-testid='button-ServiceLine.1.Clinic.1.EmptyState']/div"));
         public IWebElement SelectedDateNotAvailable => _driver.FindElement(By.XPath("//*[contains(@data-testid,'text-The selected day is not available')]"));
 
         public bool IsAppointmentButtonPresent()
@@ -159,7 +154,7 @@ namespace SchedulerTests.PageObjects
             {
                 _testUtil.IsElementDisplayed(AppointmentTimeButton);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 return false;
             }
@@ -170,17 +165,6 @@ namespace SchedulerTests.PageObjects
         {
             AppointmentTimeButton.Click();
             RedirectToLogInPage();
-        }
-
-        public void ClickCancelVisitButton()
-        {
-            CancelVisitButton.Click();
-            TestUtilities.WebDriverWaitForElement();
-        }
-
-        public void ClickNoButton()
-        {
-            NoButton.Click();
         }
 
         public bool NextAvailableDatePresent()
@@ -205,21 +189,10 @@ namespace SchedulerTests.PageObjects
             _testUtil.IsElementDisplayedAndTextValid(SelectedDateNotAvailable, UIConstants.SelectedDayNotAvailable);
             NextAvailableDate.Click();
             ClickAppointmentButton();
-        }
-
-        public void VerifyCancelAppointmentAlert()
-        {
-            _testUtil.IsElementDisplayed(AreYouSureAlert);
-
-            _testUtil.IsElementDisplayedAndTextValid(AreYouSureLabel, UIConstants.AreYouSure);
-
-            _testUtil.IsElementDisplayedAndTextValid(NoButton, UIConstants.No);
-
-            _testUtil.IsElementDisplayedAndTextValid(CancelVisitButton, UIConstants.CancelVisit);            
-        }
-
+        }     
     }
 
+    // This partial class contains all data for Provider details.
     public partial class SchedulerPage
     {
         public IWebElement ClinicLocationRow => _driver.FindElement(By.XPath("//*[contains(@data-testid,'ServiceLine.1.Clinic.1.LocationRow')]"));
@@ -275,6 +248,7 @@ namespace SchedulerTests.PageObjects
         }
     }
 
+    // This partial class contains all data for Care Location Selector.
     public partial class SchedulerPage
     {
         public IWebElement LocationSelector => _driver.FindElement(By.XPath("//div[@data-testid='LocationSelector']"));
