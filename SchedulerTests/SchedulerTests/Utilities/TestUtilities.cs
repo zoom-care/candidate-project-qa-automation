@@ -31,11 +31,9 @@ namespace SchedulerUIAutomationTests.Utilities
                     _driver = new ChromeDriver(@"Driver\\", options);
 
                     if (!_isHeadless)
-                        _driver.Manage().Window.Maximize();
-                    
+                        _driver.Manage().Window.Maximize();                    
                     break;
-                case "firefox":
-                    break;
+                // More browsers can be configured here.    
             }
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             return _driver;

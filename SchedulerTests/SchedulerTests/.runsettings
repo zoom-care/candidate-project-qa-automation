@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RunSettings>
   <TestRunParameters>
-    <Parameter name ="ApplicationUri" value ="https://www.zoomcare.com/schedule" />
-    <Parameter name ="Browser" value ="chrome" />
-    <Parameter name ="Headless" value ="false" />
+    <Parameter name ="ApplicationUri" value ="https://www.zoomcare.com/schedule" /><!-- Application link-->
+    <Parameter name ="Browser" value ="chrome" /><!-- Can be used to specify browser. Only chrome is configured for now.-->
+    <Parameter name ="Headless" value ="false" /> <!-- When true, will run the test in Headlessmode-->
   </TestRunParameters>
 </RunSettings>
