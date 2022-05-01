@@ -62,7 +62,7 @@ Packages Current versions:
 4. Right click on OnlineSchedulingTests.
 5. Click Run.
 
-### Some DataAnnotations used in framework:
+### Some DataAnnotations used in framework :
 
 1. [TestMethod] - MSTest annotation which defines a method is a test case.
 2. [TestClass] - MSTest annotation to define a Test Class.
