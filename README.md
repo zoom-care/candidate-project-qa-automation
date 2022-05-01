@@ -25,7 +25,7 @@ Browser : Google Chrome 101.0
 
 ### Getting Started : 
 
-Copy the framework into your local machine. Open the solution file SchedulerTests.sln in Visual Studio(This framework was developed in VS 2022). In VS go to Test-> Configure Run Settings->Select Solution Wide runsettings file , select the path to the .runsettings file. 
+Copy the framework into your local machine. Open the solution file SchedulerTests.sln in Visual Studio. In VS go to Test-> Configure Run Settings->Select Solution Wide runsettings file , select the path to the .runsettings file. 
 This file is the configuration file for the framework. It contains 3 parameters which needs to be entered.
 1. ApplicationUri - The link to the application.
 2. Browser - Browser on which the testing would happen. (For now its only configured for Chrome.)
@@ -35,7 +35,7 @@ Once the values are defined in .runsettings, Build the solution Build->Build Sol
 
 ### Installing nuget packages
 
-After building the solution if the NuGet is still not installed, then go to Tools->NuGet Package Manager->Manage NuGet Packages for Soution and install all the unisntalled packages in Dependencies->Packages.
+After building the solution if the NuGet packages are still not installed, then go to Tools->NuGet Package Manager->Manage NuGet Packages for Solution and install all the uninstalled packages in solution under Dependencies->Packages.
 Packages Current versions:
 1. DotNetSeleniumExtras.PageObjects.Core(4.0.1)
 2. FluentAssertions - used for Asserts(6.6.0)
