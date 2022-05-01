@@ -21,7 +21,7 @@ An automation framework that is used to test the online scheduling page of ZoomC
 ### Pre-requisite : 
 
 IDE : Visual Studio 2022
-Brwoser : Google Chrome 101.0
+Browser : Google Chrome 101.0
 
 ### Getting Started : 
 
