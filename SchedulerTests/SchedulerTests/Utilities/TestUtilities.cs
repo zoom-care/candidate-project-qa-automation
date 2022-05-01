@@ -50,7 +50,9 @@ namespace SchedulerUIAutomationTests.Utilities
         }
 
         public static void SelectDropdown()
-        {            
+        {        
+            //This method has waits to select drop down values.
+
             WebDriverWaitForElement();
 
             Actions a = new(_driver);

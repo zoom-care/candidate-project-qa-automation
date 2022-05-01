@@ -1,29 +1,6 @@
-# ZoomCare Candidate Code Challenge - QA / Automation
-
-![ZoomCare Logo](https://avatars0.githubusercontent.com/u/48925141?s=150)
-
-Welcome to the ZoomCare QA / Automation Candidate Code Challenge. If you are here you most likely have interest in joining the ZoomCare Quality Engineering Team and have been asked to respond to this challenge. If you came here on your own, you are welcome to explore the challenge and use it to sharpen your skills or prepare for future interviews.
-
-The ZoomCare Candidate Code Challenges are intended to take around 2-3 hours to complete. This is not intended to be an extensive test of your programing skills or knowledge, but rather as a starting point for further conversations during the application process.
-
-## Instructions
-
-This Candidate Code Challenge is geared specifically toward QA Engineers with end-to-end testing and programming experience. The challenge is split into two parts: the first is to devise a test plan for the prompt provided, while the second is to create a basic automation framework that executes some of the test cases written. Both parts are of equal importance, but you'll likely spend more time on Part 2 (automation).
-
-Specifically:
-1. Create a fork of this repository into your personal GitHub space.
-2. Wipe the contents of this README file, and in its place, create two sections: Test Cases and Automation Instructions.
-3. Use the Test Cases section in the README file to write all of your test cases in response to the first part.
-4. Set up an automation framework and its associated pages/specs/utilities/etc within the repository.
-5. Use the Automation Instructions section in the README to provide instructions for how to set up the framework. Assume the user has nothing pre-installed and also does not know how to use the framework you chose.
-6. Create a Pull Request back to the original project.
 
 
-## Prompt
-
-ZoomCare has a unique promise: we make healthcare delightful by giving it to you on your terms. No matter where or when you want care, ZoomCare can provide complete care for all that ails them, in the palm of their hand. The most critical way we deliver on that promise is through our online scheduling system, which is completely self-service by our patients and coordinates the vast majority of appointments we serve. We call this the "Search/Sechedule Moment". Simply visit our public website at https://www.zoomcare.com, and you'll immediately be greeted with a scheduler to get you on your way.
-
-### Part 1
+### Test Cases
 
 Devise a set of test scenarios / acceptance criteria that covers enough breadth of this feature for a daily smoke test.
 
@@ -35,12 +12,58 @@ A few asks and helpful tips:
 - We're interested in testing the application's front-end user interface, from an end-to-end perspective. Thinking about what the back-end (ie. API endpoint) does is useful, but is not a requirement for this challenge.
 - Think about the entire workflow: what happens if you change X parameter? Does Y also change depending on X? What about things changing without any interaction after a period of time?
 
-### Part 2
+### Automation Instructions
 
-Take at least three cases that you've written in Part 1, and propose how they would transfer into an automated test by coding/scripting them with a framework and/or tool. Use whatever you're comfortable with (Selenium, Cypress, etc.), and you can write in any programming/scripting language you choose.
+# Project Title : 
 
-What we're looking for:
-- Verifying you can write code and/or script well (knowledge of built-in functions for your chosen language, good organization of classes/functions, reasonable use of comments, etc.)
-- You have a clear vision for how to automate (using POM or Screenplay methodology, BDD or TDD best practices, etc.)
-- You know how to get the results you need (knowledge of the framework(s) and libraries chosen, and using their functionality appropriately)
-- Working code is good. Pretty working code is better. Fast, pretty, working code is best.
+An automation framework that is used to test the online scheduling page of ZoomCare website. Its uses C#.NET, Selenium POM, MS Test and FluentAssertions. 
+
+# Pre-requisite : 
+
+IDE : Visual Studio 2022
+Brwoser : Google Chrome 101.0
+
+# Getting Started : 
+
+Copy the framework into your local machine. Open the solution file SchedulerTests.sln in Visual Studio(This framework was developed in VS 2022). In VS go to Test-> Configure Run Settings->Select Solution Wide runsettings file , select the path to the .runsettings file. 
+This file is the configuration file for the framework. It contains 3 parameters which needs to be entered.
+1. ApplicationUri - The link to the application.
+2. Browser - Browser on which the testing would happen. (For now its only configured for Chrome.)
+3. Headless - To run in headless mode or not.
+
+Once the values are defined in .runsettings, Build the solution Build->Build Solution or Ctrl+Shift+B. 
+
+# Installing nuget packages
+
+After building the solution if the NuGet is still not installed, then go to Tools->NuGet Package Manager->Manage NuGet Packages for Soution and install all the unisntalled packages in Dependencies->Packages.
+Packages Current versions:
+1. DotNetSeleniumExtras.PageObjects.Core(4.0.1)
+2. FluentAssertions - used for Asserts(6.6.0)
+3. Selenium.Chrome.Webdriver(85.0.0)
+4. Selenium.Webdriver(4.1.0)
+
+# Framework Components
+
+1. Driver : This folder contains the exe for the driver. Ex chromderiver.exe. These drivers are used to run the tests in respective browser.
+2. Models : This folder contains the Dtos for the application.
+3. PageObjects : As this framework follows Selenium POM , this folder contains class files that represent each page. Ex Here we have SchedulerPage.cs that is the class file for Scheduler page. It will contain all the corresponding web page elements as its properties.
+   Actions performed on the elements are defined as methods of this class.
+4. TestCases : This folder will contain all the test cases.
+5. Utilities : This folder contains all the helper classes.
+6. .runsettings : XML config file.
+
+# Steps to execute
+
+1. Open *\candidate-project-qa-automation\SchedulerTests\SchedulerTests.sln.
+2. Build the solution.
+3. Open Test->Test Explorer.
+4. Right click on OnlineSchedulingTests.
+5. Click Run.
+
+# Some DataAnnotations used in framework
+1. [TestMethod] - MSTest annotation which defines a method is a test case.
+2. [TestClass] - MSTest annotation to define a Test Class.
+3. [ClassInitialize] - This method is called first for each test class.
+4. [ClassCleanup] - This method is called after all test cases of class is executed.
+5. [DynamicData], [DataRow] - Used to provide test data.
+
