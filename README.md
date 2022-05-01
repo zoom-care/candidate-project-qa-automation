@@ -35,7 +35,7 @@ This file is the configuration file for the framework. It contains 3 parameters 
 
 Once the values are defined in .runsettings, Build the solution Build->Build Solution or Ctrl+Shift+B. 
 
-### Installing nuget packages
+### Installing nuget packages :
 
 After building the solution if the NuGet packages are still not installed, then go to Tools->NuGet Package Manager->Manage NuGet Packages for Solution and install all the uninstalled packages in solution under Dependencies->Packages.
 Packages Current versions:
@@ -44,7 +44,7 @@ Packages Current versions:
 3. Selenium.Chrome.Webdriver(85.0.0)
 4. Selenium.Webdriver(4.1.0)
 
-### Framework Components
+### Framework Components :
 
 1. Driver : This folder contains the exe for the driver. Ex chromderiver.exe. These drivers are used to run the tests in respective browser.
 2. Models : This folder contains the Dtos for the application.
@@ -54,7 +54,7 @@ Packages Current versions:
 5. Utilities : This folder contains all the helper classes.
 6. .runsettings : XML config file.
 
-### Steps to execute
+### Steps to execute :
 
 1. Open *\candidate-project-qa-automation\SchedulerTests\SchedulerTests.sln.
 2. Build the solution.
@@ -62,7 +62,8 @@ Packages Current versions:
 4. Right click on OnlineSchedulingTests.
 5. Click Run.
 
-### Some DataAnnotations used in framework
+### Some DataAnnotations used in framework:
+
 1. [TestMethod] - MSTest annotation which defines a method is a test case.
 2. [TestClass] - MSTest annotation to define a Test Class.
 3. [ClassInitialize] - This method is called first for each test class.
