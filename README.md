@@ -12,18 +12,18 @@ A few asks and helpful tips:
 - We're interested in testing the application's front-end user interface, from an end-to-end perspective. Thinking about what the back-end (ie. API endpoint) does is useful, but is not a requirement for this challenge.
 - Think about the entire workflow: what happens if you change X parameter? Does Y also change depending on X? What about things changing without any interaction after a period of time?
 
-### Automation Instructions
+## Automation Instructions
 
-# Project Title : 
+### ZoomCare Scheduler Tests : 
 
 An automation framework that is used to test the online scheduling page of ZoomCare website. Its uses C#.NET, Selenium POM, MS Test and FluentAssertions. 
 
-# Pre-requisite : 
+### Pre-requisite : 
 
 IDE : Visual Studio 2022
 Brwoser : Google Chrome 101.0
 
-# Getting Started : 
+### Getting Started : 
 
 Copy the framework into your local machine. Open the solution file SchedulerTests.sln in Visual Studio(This framework was developed in VS 2022). In VS go to Test-> Configure Run Settings->Select Solution Wide runsettings file , select the path to the .runsettings file. 
 This file is the configuration file for the framework. It contains 3 parameters which needs to be entered.
@@ -33,7 +33,7 @@ This file is the configuration file for the framework. It contains 3 parameters 
 
 Once the values are defined in .runsettings, Build the solution Build->Build Solution or Ctrl+Shift+B. 
 
-# Installing nuget packages
+### Installing nuget packages
 
 After building the solution if the NuGet is still not installed, then go to Tools->NuGet Package Manager->Manage NuGet Packages for Soution and install all the unisntalled packages in Dependencies->Packages.
 Packages Current versions:
@@ -42,7 +42,7 @@ Packages Current versions:
 3. Selenium.Chrome.Webdriver(85.0.0)
 4. Selenium.Webdriver(4.1.0)
 
-# Framework Components
+### Framework Components
 
 1. Driver : This folder contains the exe for the driver. Ex chromderiver.exe. These drivers are used to run the tests in respective browser.
 2. Models : This folder contains the Dtos for the application.
@@ -52,7 +52,7 @@ Packages Current versions:
 5. Utilities : This folder contains all the helper classes.
 6. .runsettings : XML config file.
 
-# Steps to execute
+### Steps to execute
 
 1. Open *\candidate-project-qa-automation\SchedulerTests\SchedulerTests.sln.
 2. Build the solution.
@@ -60,7 +60,7 @@ Packages Current versions:
 4. Right click on OnlineSchedulingTests.
 5. Click Run.
 
-# Some DataAnnotations used in framework
+### Some DataAnnotations used in framework
 1. [TestMethod] - MSTest annotation which defines a method is a test case.
 2. [TestClass] - MSTest annotation to define a Test Class.
 3. [ClassInitialize] - This method is called first for each test class.
