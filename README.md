@@ -18,10 +18,12 @@ A few asks and helpful tips:
 
 An automation framework that is used to test the online scheduling page of ZoomCare website. Its uses C#.NET, Selenium POM, MS Test and FluentAssertions. 
 
-### Pre-requisite : 
+### Versions : 
 
-IDE : Visual Studio 2022
-Browser : Google Chrome 101.0
+- IDE : Visual Studio 2022
+- Browser : Google Chrome 101.0
+- .Net Framework : .Net 6.0
+- MS Test : 2.2.1.0
 
 ### Getting Started : 
 
