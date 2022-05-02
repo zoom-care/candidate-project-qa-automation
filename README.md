@@ -1,12 +1,92 @@
-
-
 ## Test Cases
 
-# 1. Verify Location Selector
+### TC 1 : Verify Want Care Location Selector
 
-|Steps|Expected Output|
-|---|---|
-|Navigate to Schedule page| Page is loaded|
+- Navigate to page https://www.zoomcare.com/schedule.
+- Verify the location selector is present with text "Want care in @Location". Here @Location will be according to you local zip code.
+- Click on the link and it should open a popup with all nearby locations options.
+- The popup should contain "Use my location" option.
+- It should also contain a input text box to enter city on zip.
+- Enter a zip code Ex 97124 . The popup should display a dropdown with available address. 
+- The page should be updated with the selected location. If available clinic/provider/appointment is present then that deatils should be displayed.
+
+### TC 2 : Verify Care Selector Popover
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- Verify Care Selector popover is present and Illness/Injury is selected by default.
+- Click on the selector and verify the popup with all the care selector options are displayed. It should have following options Illness/Injury", "Adult COVID-19 Screening","Pediatric COVID-19 Screening","Primary Care","Family Medicine","Emergency Care",
+  "Sports Physical","Mental Health Meds & More","Mental Health Talk Therapy","X-Ray & Imaging","Dermatology","Women's Health (Gynecology)","Orthopedics","Podiatry","Chiropractic","Physical Therapy".
+- Select any one care Ex. Primary Care.
+- Page should be updated with "Primary Care" in the Care Selector popover.
+- If available clinic/provider/appointment is present then that details should be displayed.
+
+### TC 3 : Verify Date Selector
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- Verify "Today" is displayed by default.
+- Click on the date selector.
+- It should display the date popup.
+- Select a date.
+- If available clinic/provider/appointment is present for that date then that details should be displayed.
+
+### TC 4 : Verify book an appointment 
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- For avaialble provider and verify appointment details are present.
+- The button with time details should be displayed. 
+- The time should be as per the local time zone.
+- If more than 6 , then 5 appointments should displayed and a More button should be displayed.
+- Click on More and all the appointments list should be displayed.
+- Less button should be displayed. Click on it and should go back to original state.
+- Click on the button and we should be navigated to log in page.
+
+### TC 5 : Verify Provider details and book appointment
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- For avaialble provider and appointment details verify below details are displayed.
+- Verify Clinic Link is present.
+- Verify Address Details Line 1 and Line 2 are present.
+- Verify "View Clinic Services" link is present.
+- Verify Map is present.
+- If appoitnment is present, verify appointment time button is present.
+- Click on the appointment button, we should be navigated to Log In page.
+
+### TC 6 : Verify ChatVideo Row
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- Verify Clinic Care, Video Care and Chat Care buttons are present and Clinic Care is selected by default.
+- Click on Video Care.
+- Illness/Injury Video Vist is diplayed and if available appointment details are present.
+- Click on Chat Care.
+- We should be navigated to log in page.
+
+### TC 7 : Verify Emergency Care
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- Verify Emergency Care section is displayed.
+- All the available Emergency Care details are displayed.
+- For each available provider, message should be displayed "ZoomCare is not a hospital ER. For threatening emergencies go to the ER or call 911."
+
+### TC 8 : Verify Doctor link
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- If provider details are present, click on the Doctor Name link.
+- It should be navigated to page with doctor details and next available appointment for Care selector is displayed.
+
+### TC 9 : Verify Info $ link 
+
+- Navigate to page https://www.zoomcare.com/schedule.
+- Eor each section Illness/Injury, Emergency Care sections Info|$ link is present.
+- Click on the link,
+- A popup should open and it should contain the information for the clinic visit.
+- It should also display Health Insurance Accepted information.
+- Type of Visit : Clinic should be displayed at bottom.
+- Uninsured Rates should also be displayed.
+
+
+
+
+
 
 ## Automation Instructions
 
