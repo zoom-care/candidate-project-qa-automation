@@ -1,6 +1,6 @@
 ## Test Cases
 
-### TC 1 : Verify Want Care Location Selector
+### TC 1 : Verify Want Care Location Selector (Automated)
 
 - Navigate to page https://www.zoomcare.com/schedule.
 - Verify the location selector is present with text "Want care in @Location". Here @Location will be according to you local zip code.
@@ -10,7 +10,7 @@
 - Enter a zip code Ex 97124 . The popup should display a dropdown with available address. 
 - The page should be updated with the selected location. If available clinic/provider/appointment is present then that deatils should be displayed.
 
-### TC 2 : Verify Care Selector Popover
+### TC 2 : Verify Care Selector Popover (Automated)
 
 - Navigate to page https://www.zoomcare.com/schedule.
 - Verify Care Selector popover is present and Illness/Injury is selected by default.
@@ -29,7 +29,7 @@
 - Select a date.
 - If available clinic/provider/appointment is present for that date then that details should be displayed.
 
-### TC 4 : Verify book an appointment 
+### TC 4 : Verify book an appointment
 
 - Navigate to page https://www.zoomcare.com/schedule.
 - For available provider and verify appointment details are present.
@@ -40,7 +40,7 @@
 - Less button should be displayed. Click on it and should go back to original state.
 - Click on the button and we should be navigated to log in page.
 
-### TC 5 : Verify Provider details
+### TC 5 : Verify Provider details (Automated)
 
 - Navigate to page https://www.zoomcare.com/schedule.
 - For available provider and appointment details verify below details are displayed.
@@ -51,7 +51,7 @@
 - If appointment is present, verify appointment time button is present.
 - Click on the appointment button, we should be navigated to Log In page.
 
-### TC 6 : Verify ChatVideo Row
+### TC 6 : Verify ChatVideo Row (Automated)
 
 - Navigate to page https://www.zoomcare.com/schedule.
 - Verify Clinic Care, Video Care and Chat Care buttons are present and Clinic Care is selected by default.
