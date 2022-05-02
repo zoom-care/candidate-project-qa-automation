@@ -32,7 +32,7 @@
 ### TC 4 : Verify book an appointment 
 
 - Navigate to page https://www.zoomcare.com/schedule.
-- For avaialble provider and verify appointment details are present.
+- For available provider and verify appointment details are present.
 - The button with time details should be displayed. 
 - The time should be as per the local time zone.
 - If more than 6 , then 5 appointments should displayed and a More button should be displayed.
@@ -40,15 +40,15 @@
 - Less button should be displayed. Click on it and should go back to original state.
 - Click on the button and we should be navigated to log in page.
 
-### TC 5 : Verify Provider details and book appointment
+### TC 5 : Verify Provider details
 
 - Navigate to page https://www.zoomcare.com/schedule.
-- For avaialble provider and appointment details verify below details are displayed.
+- For available provider and appointment details verify below details are displayed.
 - Verify Clinic Link is present.
 - Verify Address Details Line 1 and Line 2 are present.
 - Verify "View Clinic Services" link is present.
 - Verify Map is present.
-- If appoitnment is present, verify appointment time button is present.
+- If appointment is present, verify appointment time button is present.
 - Click on the appointment button, we should be navigated to Log In page.
 
 ### TC 6 : Verify ChatVideo Row
@@ -56,7 +56,7 @@
 - Navigate to page https://www.zoomcare.com/schedule.
 - Verify Clinic Care, Video Care and Chat Care buttons are present and Clinic Care is selected by default.
 - Click on Video Care.
-- Illness/Injury Video Vist is diplayed and if available appointment details are present.
+- Illness/Injury Video Visit is displayed and if available appointment details are present.
 - Click on Chat Care.
 - We should be navigated to log in page.
 
