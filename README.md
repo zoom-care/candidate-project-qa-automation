@@ -8,7 +8,7 @@
 - The popup should contain "Use my location" option.
 - It should also contain a input text box to enter city on zip.
 - Enter a zip code Ex 97124 . The popup should display a dropdown with available address. 
-- The page should be updated with the selected location. If available clinic/provider/appointment is present then that deatils should be displayed.
+- The page should be updated with the selected location. If available clinic/provider/appointment is present then that details should be displayed.
 
 ### TC 2 : Verify Care Selector Popover (Automated)
 
@@ -76,7 +76,7 @@
 ### TC 9 : Verify Info $ link 
 
 - Navigate to page https://www.zoomcare.com/schedule.
-- Eor each section Illness/Injury, Emergency Care sections Info|$ link is present.
+- For each section Illness/Injury, Emergency Care sections Info|$ link is present.
 - Click on the link,
 - A popup should open and it should contain the information for the clinic visit.
 - It should also display Health Insurance Accepted information.
