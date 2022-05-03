@@ -29,7 +29,7 @@
 - Select a date.
 - If available clinic/provider/appointment is present for that date then that details should be displayed.
 
-### TC 4 : Verify book an appointment
+### TC 4 : Verify to schedule an appointment
 
 - Navigate to page https://www.zoomcare.com/schedule.
 - For available provider and verify appointment details are present.
@@ -38,7 +38,8 @@
 - If more than 6 , then 5 appointments should displayed and a More button should be displayed.
 - Click on More and all the appointments list should be displayed.
 - Less button should be displayed. Click on it and should go back to original state.
-- Click on the button and we should be navigated to log in page.
+- Click on the button and we should be navigated to log in page from where once you login you can book the appointment.
+- If you click on "Back", then confirmation box should appear to confirm if you want to leave the appointment.
 
 ### TC 5 : Verify Provider details (Automated)
 
@@ -48,6 +49,9 @@
 - Verify Address Details Line 1 and Line 2 are present.
 - Verify "View Clinic Services" link is present.
 - Verify Map is present.
+- Verify the Provider name placeholder is present.
+- Verify the Team details of the provider is present.
+- Verify the Provider pic placeholder is present.
 - If appointment is present, verify appointment time button is present.
 - Click on the appointment button, we should be navigated to Log In page.
 
@@ -84,10 +88,6 @@
 - Uninsured Rates should also be displayed.
 
 
-
-
-
-
 ## Automation Instructions
 
 ### ZoomCare Scheduler Tests : 
@@ -106,7 +106,7 @@ An automation framework that is used to test the online scheduling page of ZoomC
 Copy the framework into your local machine. Open the solution file SchedulerTests.sln in Visual Studio. In VS go to Test-> Configure Run Settings->Select Solution Wide runsettings file , select the path to the .runsettings file. 
 This file is the configuration file for the framework. It contains 3 parameters which needs to be entered.
 1. ApplicationUri - The link to the application.
-2. Browser - Browser on which the testing would happen. (For now its only configured for Chrome.)
+2. Browser - Browser on which the testing would happen. (For now its only configured for Chrome. For other browsers, place the driver in the Drivers section and set up the driver in TestUtilities.cs.)
 3. Headless - To run in headless mode or not.
 
 Once the values are defined in .runsettings, Build the solution Build->Build Solution or Ctrl+Shift+B. 
