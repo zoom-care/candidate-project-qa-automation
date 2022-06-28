@@ -1,48 +1,45 @@
 import pytest
 from config.webdriver import WebDriverFactory
-from utilities.logger import Logger
-
-log = Logger().init()
-
+import logging
 
 @pytest.fixture()
 def each_test(request, browser):
     # Arrange
-    log.info("Running method level each_test")
+    logging.info("Running method level each_test")
 
     wdf = WebDriverFactory(browser)
     driver = wdf.set_driver().get_driver()
 
     if request.cls is not None:
         request.cls.driver = driver
-        log.info("Instantiated driver")
+        logging.info("Instantiated driver")
     else:
-        log.error("Fatal error in instantiate driver \n")
+        logging.error("Fatal error in instantiate driver \n")
 
     yield driver
     # Cleanup
     driver.quit()
-    log.info("Running method level tearDown \n")
+    logging.info("Running method level tearDown \n")
 
 
 @pytest.fixture(scope="class")
 def each_class(request, browser):
     # Arrange
-    log.info("Running one time each_class")
+    logging.info("Running one time each_class")
 
     wdf = WebDriverFactory(browser)
     driver = wdf.set_driver().get_driver()
 
     if request.cls is not None:
         request.cls.driver = driver
-        log.info("Instantiated driver")
+        logging.info("Instantiated driver")
     else:
-        log.error("Fatal error in instantiate driver \n")
+        logging.error("Fatal error in instantiate driver \n")
 
     yield driver
     # Cleanup
     driver.quit()
-    log.info("Running one time tearDown \n")
+    logging.info("Running one time tearDown \n")
 
 
 def pytest_addoption(parser):

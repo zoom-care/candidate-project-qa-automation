@@ -1,6 +1,5 @@
 import logging
 
-
 class Logger:
     def __init__(self):
         self._logger = logging.getLogger(__name__)

@@ -32,7 +32,7 @@ class TestSchedule(unittest.TestCase):
         self.assertTrue(self.schedule_page.is_medical_opt_selected(Schedule.clinic_care), "Clinic care is not selected")
 
     def test_select_clinic_care(self):
-        # "Select Clinic Care Option and Today where user has not logged and location is automatically set"
+        # "Select Clinic Care Option and Today where user has not logged in and location is automatically set"
         time.sleep(1)
         self.schedule_page.click_date_selector()
         self.assertTrue(self.schedule_page.get_pop_over().is_displayed(), "Message is not displayed")
@@ -43,7 +43,7 @@ class TestSchedule(unittest.TestCase):
         time.sleep(1)
 
     def test_select_video_care(self):
-        # "Select Video Care Option and Today where user has not logged and location is automatically set"
+        # "Select Video Care Option and Today where user has not logged in and location is automatically set"
         time.sleep(1)
         self.schedule_page.click_date_selector()
         self.assertTrue(self.schedule_page.get_pop_over().is_displayed(), "Message is not displayed")
@@ -54,7 +54,7 @@ class TestSchedule(unittest.TestCase):
         time.sleep(1)
 
     def test_select_chat_care(self):
-        #"Select Chat Care Option and Today where user has not logged and location is automatically set"
+        #"Select Chat Care Option and Today where user has not logged in and location is automatically set"
         time.sleep(1)
         self.schedule_page.click_date_selector()
         self.assertTrue(self.schedule_page.get_pop_over().is_displayed(), "Message is not displayed")
