@@ -1,45 +1,48 @@
 # ZoomCare Candidate Code Challenge - QA / Automation
 
-![ZoomCare Logo](https://avatars0.githubusercontent.com/u/48925141?s=150)
+>Note: My current location is outside of the US, so when I try to find any appointments I get an empty result, 
+> regardless of the city I choose. I checked this using a VPN with an american IP, in that case everything works fine.
+> Because of this, I could only run my tests up to visiting Schedule, changing cities, selecting care type and date.
+> Everything after that is a theory that I _hope_ works close to fine. <br> Sol P. from Hexacta
+ 
+## Test Cases 
+| TC ID | TC Description                                    | Test Steps                                                                                                                                         | Test Data | Expected Results                                                                                                                                                                                                                           |
+|-------|---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TC1   | Change appointment's location                     | 1. Go to www.zoomcare.com<br>2. Go to Schedule<br>3. Click on location's link and choose from list displayed                                       |           | Location is changed to the chosen one                                                                                                                                                                                                      |
+| TC2   | Select type of care for appointment               | 1. Go to www.zoomcare.com<br>2. Go to Schedule<br>3. Click on 'Illness/Injury' dropwdown and choose type of care                                   |           | Selected 'Illness/Injury' will change to the chosen one                                                                                                                                                                                    |
+| TC3   | Select date for appointment                       | 1. Go to www.zoomcare.com<br>2. Go to Schedule<br>3. Click on 'Today' dropdown and choose date                                                     |           | Selected date will change to the chosen one                                                                                                                                                                                                |
+| TC4   | Visualize search results and pricing info         | 1. Go to www.zoomcare.com<br>2. Go to Schedule<br>3. Select type of care and date<br>4. Visualize title in search results and click on 'Info' icon |           | Search results will display a label title with the type of care selected before<br>Search results will display an 'Info\|$' icon in the title, when clicked it'll display info                                                             |
+| TC5   | Visit caretaker's profile details                 | 1. Go to www.zoomcare.com<br>2. Go to Schedule<br>3. Select type of care and date<br>4. Visit caretaker's profile details                          |           | Clicking on caretaker's name will open up a new tab with their profile<br>Clicking on caretaker's map button will open up a new Google Maps tab<br>Clicking on caretaker's 'Clinic Services' link will display a list of services provided |
+| TC6   | Select caretaker's timeslot for appointment       | 1. Go to www.zoomcare.com<br>2. Go to Schedule<br>3. Select type of care and date<br>4. Select caretaker's timeslot                                |           | Search results will display a list of caretakers<br>The caretaker will display at least one time slot available<br>Once clicked, it will redirect to the login page                                                                        |
+| TC7   | Select Video Care format for Podiatry appointment | 1. Go to www.zoomcare.com<br>2. Go to Schedule<br>3. Select Podiatry and date<br>4. Select Video Care                                              |           | Before the search results are shown, a 'Video Care' button will be displayed<br>Clicking on it will filter search results that support that format                                                                                         |
 
-Welcome to the ZoomCare QA / Automation Candidate Code Challenge. If you are here you most likely have interest in joining the ZoomCare Quality Engineering Team and have been asked to respond to this challenge. If you came here on your own, you are welcome to explore the challenge and use it to sharpen your skills or prepare for future interviews.
+## Automation Instructions
+### Prerequisites
+- Install [Python](https://www.python.org/)
+- Install [pip](https://pip.pypa.io/en/stable/installing/) (it might have been already installed in the previous step)
+- Install [PyCharm](https://www.jetbrains.com/es-es/pycharm/download/)
+- In Windows, edit system's Environment Variables
+  - Variable `Path` with value of where Python was installed, e.g. `C:/Python39`
+  - Variable `Path` with value of Python's Scripts folder, e.g. `C:/Python39/Scripts`
+- Download [ChromeDriver](https://chromedriver.chromium.org/)
+  - Unzip file `chromedriver.exe` and copy paste it in new folder `C:/chromedriver`
+  > Keep in mind: ChromeDriver's selected version must be compatible with Chrome browser's installed version.
+  - In Windows, edit system's Environment Variables
+    - Variable `Path` with value `C:/chromedriver` (the value here has to be the path for the folder containing chromedriver.exe)
 
-The ZoomCare Candidate Code Challenges are intended to take around 2-3 hours to complete. This is not intended to be an extensive test of your programing skills or knowledge, but rather as a starting point for further conversations during the application process.
+### Installing dependencies
+After cloning the repository, go to the project folder, open CMD and execute the following:
+```sh
+$ pip install -r requirements.txt
+```
+This command can also be executed from PyCharm's terminal.
 
-## Instructions
+### Setting up interpreter and virtual environment
+- After cloning the repository and installing the dependencies, open PyCharm and go to File > Settings
+- Find section Project: <project_name> and go to Project Interpreter
+- Click on gear button and click on `Add`
+- In 'Virtual Environment' section select `New environment` and click OK
 
-This Candidate Code Challenge is geared specifically toward QA Engineers with end-to-end testing and programming experience. The challenge is split into two parts: the first is to devise a test plan for the prompt provided, while the second is to create a basic automation framework that executes some of the test cases written. Both parts are of equal importance, but you'll likely spend more time on Part 2 (automation).
-
-Specifically:
-1. Create a fork of this repository into your personal GitHub space.
-2. Wipe the contents of this README file, and in its place, create two sections: Test Cases and Automation Instructions.
-3. Use the Test Cases section in the README file to write all of your test cases in response to the first part.
-4. Set up an automation framework and its associated pages/specs/utilities/etc within the repository.
-5. Use the Automation Instructions section in the README to provide instructions for how to set up the framework. Assume the user has nothing pre-installed and also does not know how to use the framework you chose.
-7. Create a Pull Request back to the original project.
-
-## Prompt
-
-ZoomCare has a unique promise: we make healthcare delightful by giving it to you on your terms. No matter where or when you want care, ZoomCare can provide complete care for all that ails them, in the palm of their hand. The most critical way we deliver on that promise is through our online scheduling system, which is completely self-service by our patients and coordinates the vast majority of appointments we serve. We call this the "Search/Sechedule Moment". Simply visit our public website at https://www.zoomcare.com, and you'll immediately be greeted with a scheduler to get you on your way.
-
-### Part 1
-
-Devise a set of test scenarios / acceptance criteria that covers enough breadth of this feature for a daily smoke test.
-
-A few asks and helpful tips:
-- Keep your focus to just the scheduling page (https://www.zoomcare.com/schedule). Anything else is not within scope of this challenge.
-- If you click on a time slot, it will redirect you to a login screen if you don't have an account. We aren't concerned with the behavior past this point; focus on the behavior that displays to an unauthenticated guest just browsing our schedule. You can make an account if you wish, but these are real appointments - **please do not actually schedule any appointments for testing**.
-- We know there are many, many links on our website. Be selective in which links you want to verify work, and what page they should open up under what condition.
-- Prioritize your plan; try to keep your list to 8-10 test cases.
-- We're interested in testing the application's front-end user interface, from an end-to-end perspective. Thinking about what the back-end (ie. API endpoint) does is useful, but is not a requirement for this challenge.
-- Think about the entire workflow: what happens if you change X parameter? Does Y also change depending on X? What about things changing without any interaction after a period of time?
-
-### Part 2
-
-Take at least three cases that you've written in Part 1, and propose how they would transfer into an automated test by coding/scripting them with a framework and/or tool. Use whatever you're comfortable with (Selenium, Cypress, etc.), and you can write in any programming/scripting language you choose.
-
-What we're looking for:
-- Verifying you can write code and/or script well (knowledge of built-in functions for your chosen language, good organization of classes/functions, reasonable use of comments, etc.)
-- You have a clear vision for how to automate (using POM or Screenplay methodology, BDD or TDD best practices, etc.)
-- You know how to get the results you need (knowledge of the framework(s) and libraries chosen, and using their functionality appropriately)
-- Working code is good. Pretty working code is better. Fast, pretty, working code is best.
+### Executing tests
+To run the tests, you can use the Run menu from PyCharm and select the only `.feature` file created.
+You can also open the `schedule_appointment.feature` file and click on the green double arrow icon on the left.
