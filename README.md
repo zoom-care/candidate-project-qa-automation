@@ -28,7 +28,9 @@ Test Cases:
 		       Log In
            
 Automation Instructions
-5. Use the Automation Instructions section in the README to provide instructions for how to set up the framework. Assume the user has nothing pre-installed and also does not know how to use the framework you chose.
-7. Create a Pull Request back to the original project.
+Install testng.jar in your classpath.
+Run test from command line as follows:
+C:\projectfred> java -cp "path-tojar/testng.jar:path_to_yourtest_classes" org.testng.TestNG testng.xml
+Or set up a job in Jenkins that can be used to run the tests ad hoc or on a schedule.
 
 
