@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Zoom Scheduler Smoke Test Suite" thread-count="1" parallel="methods" >
+    <parameter name="report.config" value="config/extent-config.xml" />
+    
+    <test name="Zoom Scheduler Smoke Tests">
+        <classes>
+            <class name="org.delta.pex.test_automation.CandidateTest.ZoomTest" />
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
