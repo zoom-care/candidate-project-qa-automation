@@ -12,6 +12,7 @@
 
 | TC0002      | Descritprion: <br /> List of Clinic,video and chat Care|   |
 |        ---  |                         ---                    |                                          ---                                                         |
+| *Step number* | *Steps*                                          | *Expected Results*                                                                                     | 
 | 1 | Press "VideoCare" button | - List of clinics with today's available visits/windows should appear.|
 |2| Press "Clinic Care" button| - List of clinics with today's available visits/windows should appear.|
 |3| Press "ChatCare" button| - Should redirect the user to Login page.|
