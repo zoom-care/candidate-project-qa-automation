@@ -1,6 +1,6 @@
 # Test Cases
 
-| TC0001      | Descritprion: Schedule page - List of Clinincs |                                                                                                      |
+| TC0001      | Descritprion: <br /> Schedule page - List of Clinincs |                                                                                                      |
 |        ---  |                         ---                    |                                          ---                                                         |
 | Step number | Steps                                          | Expected Results                                                                                     | 
 | --- | --- | --- |
