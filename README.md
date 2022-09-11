@@ -10,7 +10,9 @@
 
 <br />
 
-| TC0002      | Descritprion: <br /> List of Clinic,video and chat Care|                                                                                            | 1 | Press "VideoCare" button | - List of clinics with today's available visits/windows should appear.|
+| TC0002      | Descritprion: <br /> List of Clinic,video and chat Care|   
+|        ---  |                         ---                    |                                          ---                                                         |
+| 1 | Press "VideoCare" button | - List of clinics with today's available visits/windows should appear.|
 |2| Press "Clinic Care" button| - List of clinics with today's available visits/windows should appear.|
 |3| Press "ChatCare" button| - Should redirect the user to Login page.|
 |4| Navigate to https://www.zoomcare.com/schedule and repeat steps 1 and 2 with different dates| - List of clinics with the selected date and available visits/windows should appear.
