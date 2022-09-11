@@ -32,11 +32,6 @@
 |6| Repeat steps 3 and 4, Press "Continue"| - Should redirect the user to the Login page.
 |7| Repeat steps 2,3 and 4 with a combination of different cities, date, reasons and appoiment times for "Clinic Care" and "VideoCare"| - All available appoiments should work as expected in steps 2,3 and 4.
 
-
-
-
-
-                                            |
-
+<br />
 
 # Automation Instructions
