@@ -1,7 +1,7 @@
 # Test Cases
 
 | TC0001      | Descritprion: Schedule page - List of Clinincs |                                                                                                      |
-|             |                                                |                                                                                                      |
+|        ---  |                         ---                    |                                          ---                                                         |
 | Step number | Steps                                          | Expected Results                                                                                     | 
 |             |                                                |                                                                                                      |
 | 1           | Navigate to https://www.zoomcare.com/schedule  | *Schedule page should be shown                                                                       |
