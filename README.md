@@ -5,7 +5,7 @@
 |             | Descritprion: Schedule page - List of Clinincs |                                                                                                      |
 |-------------|----------------------------------------------- |------------------------------------------------------------------------------------------------------|
 | Step number | Steps                                          | Expected Results                                                                                     | 
-| :---------: |:----------------------------------------------:| :---------------------------------------------------------------------------------------------------:|
+|             |                                                |                                                                                                      |
 | 1           | Navigate to https://www.zoomcare.com/schedule  | *Schedule page should be shown                                                                       |
 |             |                                                | *Zoomcare logo top-right, Schedule, Locations, Services, Pricing & Insurance links and Login button  |
 |             |                                                |  should be visible.                                                                                  |
