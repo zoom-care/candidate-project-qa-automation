@@ -10,7 +10,7 @@
 
 <br />
 
-| TC0002      | Descritprion: <br /> List of Clinic,video and chat Care|   
+| TC0002      | Descritprion: <br /> List of Clinic,video and chat Care|   |
 |        ---  |                         ---                    |                                          ---                                                         |
 | 1 | Press "VideoCare" button | - List of clinics with today's available visits/windows should appear.|
 |2| Press "Clinic Care" button| - List of clinics with today's available visits/windows should appear.|
