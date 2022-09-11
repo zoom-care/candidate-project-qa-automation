@@ -15,9 +15,24 @@
 | *Step number* | *Steps*                                          | *Expected Results*                                                                                     | 
 | 1 | Press "VideoCare" button | - List of clinics with today's available visits/windows should appear.|
 |2| Press "Clinic Care" button| - List of clinics with today's available visits/windows should appear.|
-|3| Press "ChatCare" button| - Should redirect the user to Login page.|
+|3| Press "ChatCare" button| - Should redirect the user to the Login page.|
 |4| Navigate to https://www.zoomcare.com/schedule and repeat steps 1 and 2 with different dates| - List of clinics with the selected date and available visits/windows should appear.
-|5| Repeat steps 1 and 2 with combination of different dates and different visit reasons (Primary care,Family medicine, Dermatology etc.)| - List of clinics with the selected date and service should appear with available visits/windows.
+|5| Repeat steps 1 and 2 with combination of different Cities, dates and different visit reasons (Primary care,Family medicine, Dermatology etc.)| - List of clinics for the selected City with the selected date and service should appear with available visits/windows.
+
+<br />
+
+| TC0003      | Descritprion: <br /> Schedule an Appointment as a Guest|   |
+|        ---  |                         ---                    |                                          ---                                                         |
+| *Step number* | *Steps*                                          | *Expected Results*                                                                                     | 
+| 1 | Press on "Want care in X?", choose "Seattle, WA" and tomorrow's date | - List of clinics with tomorrow's available visits/windows should appear.|
+|2| Press "More" on any Professional to see all available appointment windows | - All available appointment times should appear.|
+|3| Press on any available window for any professional| - Should redirect the user to the Login page.|
+|4| Press the "Back" button in the browser| - Popup window with the message "Click "Continue" to complete your booking. If you leave the page now, you may lose this appointment time." should appear.
+|5| Press "Cancel Booking"| - List of clinics with today's available visits/windows should appear.
+|6| Repeat steps 3 and 4, Press "Continue"| - Should redirect the user to the Login page.
+|7| Repeat steps 2,3 and 4 with a combination of different cities, date, reasons and appoiment times for "Clinic Care" and "VideoCare"| - All available appoiments should work as expected in steps 2,3 and 4.
+
+
 
 
 
