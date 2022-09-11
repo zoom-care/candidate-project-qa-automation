@@ -20,8 +20,7 @@
 |             |                                                | Under "Emergency Care" the message "We're not in your area yet—but we're growing almost as fast     |
 |             |                                                | as we deliver care! Follow us on social to stay up-to-date on ZoomCare news, announcements and more." | |             |                                                | should be visible.                                                                           | 
 | --- | --- | --- |
-| 3           | Press the "Info $" Link next to the Clinic   |The correct info should appear with the link "More info" that takes the user to the page             |
-|             | Visit title                                    |  https://www.zoomcare.com/services/illness-injury-clinic-visit                                       |
+| 3           | Press the "Info $" Link next to the Clinic Visit title| The correct info should appear with the link "More info" that takes the user to the page https://www.zoomcare.com/services/illness-injury-clinic-visit                                       |
 | --- | --- | --- |
 | 4           | Repeat step 3 "Emergency Care" section         | The correct info should appear with the link "More info" that takes the user to the page            |
 |             |                                                | https://www.zoomcare.com/services/emergency-care                                                     |
