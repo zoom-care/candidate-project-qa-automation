@@ -22,6 +22,7 @@
 | 4           | Repeat step 3 "Emergency Care" section         | The correct info should appear with the link "More info" that takes the user to the page https://www.zoomcare.com/services/emergency-care                                                     |
 | --- | --- | --- |
 
+<br />
 
 | TC0002      | Descritprion: <br /> List of Clinic,video and chat Care|                                                                                              |
 |        ---  |                         ---                    |                                          ---                                                         |
@@ -33,7 +34,7 @@
 | --- | --- | --- |
 |4| Navigate to https://www.zoomcare.com/schedule and repeat steps 1 and 2 with different dates|  List of clinics with the selected date and available visits/windows should appear.
 | --- | --- | --- |
-|4| Repeat steps 1 and 2 with combination of different dates and different visit reasons (Primary care,Family medicine, Dermatology etc.)|  List of clinics with the selected date and service should appear with available visits/windows.
+|5| Repeat steps 1 and 2 with combination of different dates and different visit reasons (Primary care,Family medicine, Dermatology etc.)|  List of clinics with the selected date and service should appear with available visits/windows.
 
 
 # Automation Instructions
