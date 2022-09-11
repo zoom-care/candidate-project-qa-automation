@@ -22,8 +22,7 @@
 | --- | --- | --- |
 | 3           | Press the "Info $" Link next to the Clinic Visit title| The correct info should appear with the link "More info" that takes the user to the page https://www.zoomcare.com/services/illness-injury-clinic-visit                                       |
 | --- | --- | --- |
-| 4           | Repeat step 3 "Emergency Care" section         | The correct info should appear with the link "More info" that takes the user to the page            |
-|             |                                                | https://www.zoomcare.com/services/emergency-care                                                     |
+| 4           | Repeat step 3 "Emergency Care" section         | The correct info should appear with the link "More info" that takes the user to the page https://www.zoomcare.com/services/emergency-care                                                     |
 | --- | --- | --- |
 
 
