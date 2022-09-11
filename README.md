@@ -14,7 +14,7 @@
 |             |                                                | List of Clinics with available times, clicnic services and map link are visible.                    |
 |             |                                                | List of Clinics should contain 5 or less options - Other options are ihdden under the "Show More"   |
 |             |                                                |  button.                                                                                             |
-|             |                                                | Right under the list of clinics, "Emergency Care" list should be visible followed by the "Info | $" |  |             |                                                |  link.                                                                                               |
+|             |                                                | Right under the list of clinics, "Emergency Care" list should be visible followed by the "Info $" link.|                                                                                               |
 | --- | --- | --- |
 | 2           | Press on "Want care in X?" and choose Denver   | List of clinics in Denver should appear - If less then 5, "Show more" button should not be visible. |
 |             |                                                | Under "Emergency Care" the message "We're not in your area yet—but we're growing almost as fast     |
