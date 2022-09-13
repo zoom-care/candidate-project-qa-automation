@@ -4,10 +4,13 @@ it('Schedule page - List of Clinics Sanity Test',function(){
 //-------------------------------------------------------STEP 1-------------------------------------------------------\\
 
            //---Navigate to https://www.zoomcare.com/schedule
-           cy.visit('https://www.zoomcare.com/schedule')
+           cy.visit(Cypress.env('schedule_url'))
 
            //---Zoomcare logo top-right, Schedule, Locations, Services, Pricing & Insurance links, and Login button should be visible.
            cy.wait(3000)
+
+           cy.contains('Want care in').click()
+           cy.contains('Seattle').click() //Changes city to Seattle, as there's no care in my area yet
 
            cy.get('.nav__brand > .image-4').should('be.visible')
            cy.get('.nav__main__container').should('contain', 'Schedule')
