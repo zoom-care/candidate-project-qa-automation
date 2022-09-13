@@ -30,7 +30,7 @@
 |4| Press the "Back" button in the browser| - Popup window with the message "Click "Continue" to complete your booking. If you leave the page now, you may lose this appointment time." should appear.
 |5| Press "Cancel Booking"| - List of clinics with today's available visits/windows should appear.
 |6| Repeat steps 3 and 4, Press "Continue"| - Should redirect the user to the Login page.
-|7| Repeat steps 2,3,4 and 5 with a combination of different cities, date, reasons and appointment times for "Clinic Care" and "VideoCare"| - All available appointments should work as expected in steps 2,3 and 4.
+|7| Repeat steps 2,3,4, and 5 with a combination of different cities, date, reasons and appointment times for "Clinic Care" and "VideoCare"| - All available appointments should work as expected in steps 2,3, 4, and 5.
 
 <br />
 
