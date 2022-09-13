@@ -35,3 +35,21 @@
 <br />
 
 # Automation Instructions
+
+**Summary**
+This is a repository for cypress end-to-end automation test
+
+**Requirement to run the automation**
+* node.js (https://nodejs.org/en/)
+
+**First time getting files from this repository**
+* Open a terminal and navigate to the desired directory where the repository will be placed
+* Run the command "git clone https://github.com/AlyssaDonchu/candidate-project-qa-automation.git"
+
+**Running Cypress in interactive visual Cypress Test runner**
+* Navigate to the folder "Automation" (cd Automation)
+* Run the command "npm install cypress"
+* Run the command "npx cypress open"
+
+
+
