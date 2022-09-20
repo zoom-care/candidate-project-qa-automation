@@ -1,0 +1,14 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+dist/**
+.webpack/**
+.serverless/**
+node_modules/**
+nohup.out
+.DS_Store
+.idea/**
+/_warmup
+/.vscode
+/test-reports/**
+*.orig
+*.png
+*.log
