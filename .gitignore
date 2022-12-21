@@ -1,0 +1,7 @@
+__pycache__/
+.idea
+ve
+venv
+tmp*
+*cache*
+geckodriver*
