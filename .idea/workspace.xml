@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66e9dd42-c73c-4131-ae03-dae111ff33dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/drivers/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareLandingPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utility/BaseUtility.java" afterDir="false" />
+    <list default="true" id="66e9dd42-c73c-4131-ae03-dae111ff33dc" name="Changes" comment="First commit: Package for the main project.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTestSuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/searchForAppoinmentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareLandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareLandingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareSchedulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utility/BaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utility/BaseUtility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +55,29 @@
       <recent name="C:\Users\user\Desktop\Installation\Projects\ZoomCareTest\src\main\resources\drivers" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="searchForAppoinmentTest.searchForAnAppoinment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZoomCareTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.searchForAppoinmentTest" />
+      <option name="METHOD_NAME" value="searchForAnAppoinment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.searchForAppoinmentTest.searchForAnAppoinment" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,6 +87,14 @@
       <option name="presentableId" value="Default" />
       <updated>1673975239638</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit: Package for the main project.">
+      <created>1673975976610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673975976610</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit: Package for the main project." />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit: Package for the main project." />
   </component>
 </project>

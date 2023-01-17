@@ -1,4 +1,6 @@
 package PageObjects;
 
-public class ZoomCareSchedulePage {
+import Utility.BaseUtility;
+
+public class ZoomCareSchedulePage extends BaseUtility {
 }
