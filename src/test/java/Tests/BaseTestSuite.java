@@ -1,6 +1,7 @@
 package Tests;
 
 import PageObjects.ZoomCareLandingPage;
+import PageObjects.ZoomCareSchedulePage;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -15,9 +16,11 @@ public class BaseTestSuite {
     WebDriverWait wait;
 
     protected ZoomCareLandingPage zoomCareLandingPage;
+    protected ZoomCareSchedulePage zoomCareSchedulePage;
 
-    public void initPages(WebDriver driver) {
-        zoomCareLandingPage = new ZoomCareLandingPage(driver);
+    public void initPages(WebDriver driver,WebDriverWait wait) {
+        zoomCareLandingPage = new ZoomCareLandingPage(driver,wait);
+        zoomCareSchedulePage= new ZoomCareSchedulePage(driver,wait);
     }
 
     @Before
@@ -26,8 +29,7 @@ public class BaseTestSuite {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        initPages(driver);
-        driver.get("https://www.zoomcare.com/");
+        initPages(driver,wait);
     }
 
     @After

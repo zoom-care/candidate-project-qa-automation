@@ -34,6 +34,16 @@ public class BaseUtility {
         return driver.getCurrentUrl();
     }
 
+    //Method to get a URL
+    public void goTo(WebDriver driver,String url){
+        driver.get(url);
+    }
+
+    //Method to return if a button is enabled or not
+    public boolean isDisplayed(WebElement element){
+        return element.isEnabled();
+    }
+
     //Method to generate a date for the screenshot Names.
     public String getDate(){
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yy-hh-mm-ss");

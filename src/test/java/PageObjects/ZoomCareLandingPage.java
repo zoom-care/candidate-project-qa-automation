@@ -6,10 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ZoomCareLandingPage extends BaseUtility {
 
     WebDriver driver;
+    WebDriverWait wait;
 
     @FindBy(xpath = "//div[@data-testid='quickSelector.location.popoverContent']")
     WebElement locationSelector;
@@ -20,8 +22,9 @@ public class ZoomCareLandingPage extends BaseUtility {
     @FindBy(id = "quickSelectorSubmit")
     WebElement scheduleBotton;
 
-    public ZoomCareLandingPage(WebDriver driver){
+    public ZoomCareLandingPage(WebDriver driver,WebDriverWait wait){
         this.driver=driver;
+        this.wait=wait;
         PageFactory.initElements(driver,this);
     }
 
@@ -33,5 +36,9 @@ public class ZoomCareLandingPage extends BaseUtility {
         selectService.selectByVisibleText(service);
 
         clickOnElement(scheduleBotton);
+    }
+
+    public void goToLandingPage(){
+        goTo(driver,"https://www.zoomcare.com/");
     }
 }
