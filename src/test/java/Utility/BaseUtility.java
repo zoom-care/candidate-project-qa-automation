@@ -16,7 +16,7 @@ import java.util.List;
 
 public class BaseUtility {
 
-    //Method to type on a Element.
+    //Method to type on a specific Element.
     public void type(WebElement element, String text){
         element.sendKeys(text);
     }
@@ -35,6 +35,7 @@ public class BaseUtility {
     public String getURLActual(WebDriver driver){
         return driver.getCurrentUrl();
     }
+
     //Method to get the text for every webelement on the list
     public List<String> getTextFromList(List<WebElement> listElements){
         List<String> listStringFromElements= new ArrayList<>();

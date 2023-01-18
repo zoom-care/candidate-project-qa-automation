@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="66e9dd42-c73c-4131-ae03-dae111ff33dc" name="Changes" comment="Second test case done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareLandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareLandingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareSchedulePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTestSuite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ZoomCareTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ZoomCareTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Utility/BaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utility/BaseUtility.java" afterDir="false" />
     </list>
@@ -40,13 +42,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/Installation/Projects/ZoomCareTest/src/main/resources/drivers"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Installation/Projects/ZoomCareTest/src/main/resources/drivers&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Installation\Projects\ZoomCareTest\src\main\resources\drivers" />

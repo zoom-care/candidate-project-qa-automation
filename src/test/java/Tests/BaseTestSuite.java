@@ -18,11 +18,13 @@ public class BaseTestSuite {
     protected ZoomCareLandingPage zoomCareLandingPage;
     protected ZoomCareSchedulePage zoomCareSchedulePage;
 
+    //Method to initialize the pagefactory elements.
     public void initPages(WebDriver driver,WebDriverWait wait) {
         zoomCareLandingPage = new ZoomCareLandingPage(driver,wait);
         zoomCareSchedulePage= new ZoomCareSchedulePage(driver,wait);
     }
 
+    //Method to set up the properties and launch the automation.
     @Before
     public void settingUp() {
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\chromedriver.exe");
@@ -32,8 +34,9 @@ public class BaseTestSuite {
         initPages(driver,wait);
     }
 
+    //Method to close the automation browser.
     @After
     public void close() {
-        //driver.close();
+        driver.close();
     }
 }

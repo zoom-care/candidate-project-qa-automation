@@ -29,9 +29,6 @@ public class ZoomCareSchedulePage extends BaseUtility {
     @FindBy(xpath = "//div[@data-testid='quickSelector.service.popoverContent']")
     WebElement serviceSelectorList;
 
-    /*@FindBy(xpath = "//div[@dir='auto'][.='17']")
-    WebElement date17Selector;*/
-
     @FindBy(id = "quickSelectorSubmit")
     WebElement buttonSearch;
 
@@ -44,8 +41,8 @@ public class ZoomCareSchedulePage extends BaseUtility {
     @FindBy(xpath = "//div[contains(@data-testid,'LocationRow')]/div/div/div/div[2]")
     List<WebElement> listResulttLocations;
 
-    WebDriver driver;
-    WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     public ZoomCareSchedulePage(WebDriver driver,WebDriverWait wait){
         this.driver=driver;
@@ -63,12 +60,12 @@ public class ZoomCareSchedulePage extends BaseUtility {
         return getText(serviceSelector);
     }
 
-    //Method to visit the main page
+    //Method to visit the Schedule page
     public void goToSchedulePage(){
         goTo(driver,"https://www.zoomcare.com/schedule/");
     }
 
-    //Method to search for an appointment
+    //Method to search for an appointment on a specific location and service.
     public void searchForAnAppointment(String location,String service){
 
         wait.until(ExpectedConditions.elementToBeClickable(locationSelectorList));
@@ -88,16 +85,19 @@ public class ZoomCareSchedulePage extends BaseUtility {
 
     }
 
+    //Method to click on the More option on the slot times.
     public void clickOnTheButtonMoreSlotTime(){
         wait.until(ExpectedConditions.elementToBeClickable(buttonLessSlotTime));
         clickOnElement(buttonMoreSlotTime);
     }
 
+    //Method to click on the Less option on the slot times.
     public boolean isLessButtonDisplayed(){
         wait.until(ExpectedConditions.elementToBeClickable(buttonLessSlotTime));
         return isDisplayed(buttonLessSlotTime);
     }
 
+    //Method to search a keyword on every string in the list.
     public boolean keyLocationOnTheList(String keyWord){
         List<String> listString= new ArrayList<>();
         listString= getTextFromList(listResulttLocations);

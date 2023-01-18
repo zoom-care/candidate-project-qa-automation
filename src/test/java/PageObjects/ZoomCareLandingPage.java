@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -28,16 +29,21 @@ public class ZoomCareLandingPage extends BaseUtility {
         PageFactory.initElements(driver,this);
     }
 
+    //Method to search for an appointment on the landing page.
     public void searchForAnAppoinment(String location,String service){
+        wait.until(ExpectedConditions.elementToBeClickable(locationSelector));
         Select selectLocation = new Select(locationSelector);
         selectLocation.selectByVisibleText(location);
 
+        wait.until(ExpectedConditions.elementToBeClickable(serviceSelector));
         Select selectService = new Select(serviceSelector);
         selectService.selectByVisibleText(service);
 
+        wait.until(ExpectedConditions.elementToBeClickable(scheduleBotton));
         clickOnElement(scheduleBotton);
     }
 
+    //Method to get the landing page.
     public void goToLandingPage(){
         goTo(driver,"https://www.zoomcare.com/");
     }
