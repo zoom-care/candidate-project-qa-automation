@@ -22,4 +22,11 @@ public class ZoomCareTests extends BaseTestSuite{
         zoomCareSchedulePage.clickOnTheButtonMoreSlotTime();
         Assert.assertTrue(zoomCareSchedulePage.isLessButtonDisplayed());
     }
+
+    @Test
+    public void checkListResult(){
+        zoomCareSchedulePage.goToSchedulePage();
+        zoomCareSchedulePage.searchForAnAppointment(location,service);
+        Assert.assertTrue(zoomCareSchedulePage.keyLocationOnTheList("WA"));
+    }
 }

@@ -10,7 +10,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class BaseUtility {
 
@@ -32,6 +34,15 @@ public class BaseUtility {
     //Method to get the actual URL from a page.
     public String getURLActual(WebDriver driver){
         return driver.getCurrentUrl();
+    }
+    //Method to get the text for every webelement on the list
+    public List<String> getTextFromList(List<WebElement> listElements){
+        List<String> listStringFromElements= new ArrayList<>();
+        for (int i=0;i<listElements.size();i++){
+            listStringFromElements.add(listElements.get(i).getText().toLowerCase());
+        }
+
+        return listStringFromElements;
     }
 
     //Method to get a URL

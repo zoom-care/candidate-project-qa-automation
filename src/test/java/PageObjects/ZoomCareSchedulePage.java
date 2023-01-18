@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ZoomCareSchedulePage extends BaseUtility {
 
     @FindBy(xpath = "//div[@id='quickSelectorRefinerContainer']/*[1]")
@@ -32,11 +35,14 @@ public class ZoomCareSchedulePage extends BaseUtility {
     @FindBy(id = "quickSelectorSubmit")
     WebElement buttonSearch;
 
-    @FindBy(xpath = "//div[@class='css-1dbjc4n r-18u37iz r-1wyyakw'][@data-testid='ServiceLine.1.Clinic.1.Provider.1']/div/div[2]/*[last()]")
+    @FindBy(xpath = "//div[@data-testid='ServiceLine.1.Clinic.1.Provider.1']/div/div[2]/*[last()]")
     WebElement buttonMoreSlotTime;
 
-    @FindBy(xpath = "//div[@class='css-1dbjc4n r-18u37iz r-1wyyakw'][@data-testid='ServiceLine.1.Clinic.1.Provider.1']/div/div[2]/*[.='Less']")
+    @FindBy(xpath = "//div[@data-testid='ServiceLine.1.Clinic.1.Provider.1']/div/div[2]/*[.='Less']")
     WebElement buttonLessSlotTime;
+
+    @FindBy(xpath = "//div[contains(@data-testid,'LocationRow')]/div/div/div/div[2]")
+    List<WebElement> listResulttLocations;
 
     WebDriver driver;
     WebDriverWait wait;
@@ -90,6 +96,19 @@ public class ZoomCareSchedulePage extends BaseUtility {
     public boolean isLessButtonDisplayed(){
         wait.until(ExpectedConditions.elementToBeClickable(buttonLessSlotTime));
         return isDisplayed(buttonLessSlotTime);
+    }
+
+    public boolean keyLocationOnTheList(String keyWord){
+        List<String> listString= new ArrayList<>();
+        listString= getTextFromList(listResulttLocations);
+
+        for(int i=0;i<listString.size();i++){
+            if(!listString.get(i).contains(keyWord)){
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }

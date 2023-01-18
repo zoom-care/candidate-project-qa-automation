@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66e9dd42-c73c-4131-ae03-dae111ff33dc" name="Changes" comment="First test case done. BaseUtility updated. BaseTestSuite updated. all the information needed to run the the test cases is completed.">
+    <list default="true" id="66e9dd42-c73c-4131-ae03-dae111ff33dc" name="Changes" comment="Second test case done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareLandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareLandingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareSchedulePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/ZoomCareSchedulePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/searchForAppoinmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ZoomCareTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ZoomCareTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ZoomCareTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Utility/BaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utility/BaseUtility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +44,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/user/Desktop/Installation/Projects/ZoomCareTest/src/main/resources/drivers"
   }
 }]]></component>
@@ -135,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673978758546</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Second test case done.">
+      <created>1674004358088</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674004358088</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +156,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit: Package for the main project." />
     <MESSAGE value="First test case done. BaseUtility updated. BaseTestSuite updated. all the information needed to run the the test cases is completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="First test case done. BaseUtility updated. BaseTestSuite updated. all the information needed to run the the test cases is completed." />
+    <MESSAGE value="Second test case done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Second test case done." />
   </component>
 </project>
