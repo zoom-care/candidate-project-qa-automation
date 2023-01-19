@@ -22,4 +22,6 @@
 
 ### How to run
 Run in terminal the following command
-    mvn clean test
+```
+mvn clean test
+```

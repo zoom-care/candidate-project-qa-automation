@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import me.matiasormazabal.testing.MainTest;
+import me.matiasormazabal.testing.util.Constants;
 import me.matiasormazabal.testing.util.GenericTestingException;
 
 public class ScheduleProfile {
@@ -49,7 +50,7 @@ public class ScheduleProfile {
 	private WebElement schedulerScreen;
 	
 	public void goSchedulePage() {
-		MainTest.webDriver.get("https://www.zoomcare.com/schedule");
+		MainTest.webDriver.get(Constants.ZOOMCARE_SCHEDULE_URL);
 	}
 	
 	public boolean verifyElement(String element) {
