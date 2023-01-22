@@ -1,45 +1,140 @@
-# ZoomCare Candidate Code Challenge - QA / Automation
+TEST CASES
+1) US 1: main modules presence checking
+as  user I should able to have access to four major modules on main page
+- 1 AC: main modules presence checking.
+As user I should be able to see and use modules on main home page "Schedule", "Location", "Services", "Pricing & Insurance" and "Login" button
+Steps:
+  1.Given user on home page
+  2.When use able to see main modules on home page
+  | Schedule            |
+  | Locations           |
+  | Services            |
+  | Pricing & Insurance |
+  3.And user able to see "Login" button, it should be enable
 
-![ZoomCare Logo](https://avatars0.githubusercontent.com/u/48925141?s=150)
+- 2 AC: main modules clickability checking.
+As user I should be able to click modules "Schedule", "Locations", "Services", "Pricing & Insurance", "Login" on home page should be clickable
+Steps:
+  1.Given user on home page
+  2.When user click "<module>"
+  3.Then user see page related each module and title of pages contains "<module>" name
+  Examples:
+  | module              |
+  | Schedule            |
+  | Locations           |
+  | Services            |
+  | Pricing & Insurance |
+  | Login               |
 
-Welcome to the ZoomCare QA / Automation Candidate Code Challenge. If you are here you most likely have interest in joining the ZoomCare Quality Engineering Team and have been asked to respond to this challenge. If you came here on your own, you are welcome to explore the challenge and use it to sharpen your skills or prepare for future interviews.
+  
+2) US 2: as user I should be able to schedule an appointment.
+- 1 AC: as user I should be able to choose "Location" of clinic, choose Service, choose Date, "Search" button is enable (random data).
+Steps:
+  1.Given user on home page
+  2.When user click on schedule module
+  3.And user choose clinic location
+  4.And user choose service
+  5.And user choose available date
+  6.And user click on search button
+  7.Then use should able to see list of availabilities and defined date
 
-The ZoomCare Candidate Code Challenges are intended to take around 2-3 hours to complete. This is not intended to be an extensive test of your programing skills or knowledge, but rather as a starting point for further conversations during the application process.
 
-## Instructions
+- 2 AC: if user did not choose specific Service "Choose Date" dropdown should be disabled. If user click on it "Please choose a service" text appear.
+Steps:
+  1.Given user on home page
+  2.When user click on schedule module
+  3.And user choose "<Clinic location>" dropdown
+  4.And user click on choose date
+  5.Then user see "Please choose a service", search button disabled
+  Examples:
+  | Clinic location |
+  | Portland, OR    |
+  | Seattle, WA     |
+  | Vancouver, WA   |
+  | Salem, OR       |
+  | Eugene, OR      |
+  | Denver, CO      |
+  | Boulder, CO     |
+  | Boise, ID       |
 
-This Candidate Code Challenge is geared specifically toward QA Engineers with end-to-end testing and programming experience. The challenge is split into two parts: the first is to devise a test plan for the prompt provided, while the second is to create a basic automation framework that executes some of the test cases written. Both parts are of equal importance, but you'll likely spend more time on Part 2 (automation).
+- 3 AC: as user I should be able to see list of services for each clinic (two point verification).
+Steps:
+  1.Given user on home page
+  2.When user click on schedule module
+  3.And user choose "<Clinic location>" dropdown
+  4.And user click choose service
+  5.Then user see list of services for clinic
+  6.And list of services should match with list of services from database
+  Examples:
+  | Clinic location |
+  | Portland, OR    |
+  | Seattle, WA     |
+  | Vancouver, WA   |
+  | Salem, OR       |
+  | Eugene, OR      |
+  | Denver, CO      |
+  | Boulder, CO     |
+  | Boise, ID       |
 
-Specifically:
-1. Create a fork of this repository into your personal GitHub space.
-2. Wipe the contents of this README file, and in its place, create two sections: Test Cases and Automation Instructions.
-3. Use the Test Cases section in the README file to write all of your test cases in response to the first part.
-4. Set up an automation framework and its associated pages/specs/utilities/etc within the repository.
-5. Use the Automation Instructions section in the README to provide instructions for how to set up the framework. Assume the user has nothing pre-installed and also does not know how to use the framework you chose.
-7. Create a Pull Request back to the original project.
+  
+3) US 3 user should be able to define clinic location
+- 1 AC: user should be able to choose "USE MY LOCATION" to define clinic
+  Steps:
+ 1.Given user on home page
+ 2.When user click on schedule module
+ 3.And user choose "Portland, OR" location
+ 4.And user choose "Use my location" option
+ 5.Then user see message "We're not in your area yet"
 
-## Prompt
+  - 2 AC: user should be able to choose clinic location manually in case if there is no location in user area
+  Steps:
+  1.Given user on home page
+  2.When user click on schedule module
+  3.And click on clinic location module
+  4.Then user see available clinic location
+  | Portland, OR    |
+  | Seattle, WA     |
+  | Vancouver, WA   |
+  | Salem, OR       |
+  | Eugene, OR      |
+  | Denver, CO      |
+  | Boulder, CO     |
+  | Boise, ID       |
 
-ZoomCare has a unique promise: we make healthcare delightful by giving it to you on your terms. No matter where or when you want care, ZoomCare can provide complete care for all that ails them, in the palm of their hand. The most critical way we deliver on that promise is through our online scheduling system, which is completely self-service by our patients and coordinates the vast majority of appointments we serve. We call this the "Search/Sechedule Moment". Simply visit our public website at https://www.zoomcare.com, and you'll immediately be greeted with a scheduler to get you on your way.
+    
+4) US 4 as user I should be able to choose options to service delivery: Clinic care, VideoCare, ChatCare 
+- 1 AC: if user choose clinic, which provide emergency care, user should NOT see Clinic care, VideoCare, ChatCare options
+- 2 AC: if user choose clinic, which provide 5-Minute Flu Shot service, user should NOT see Clinic care, VideoCare, ChatCare options
+- 3 AC: if user choose clinic, which provide Dermatology service, user should see Clinic care, VideoCare.
+- 4 AC: if user choose clinic, which provide X-Ray, Ultrasound & CT service, user should see message "You'll need an order from a healthcare provider to schedule an X-Ray. Don't have one? Get started with an illness/Injury visit".
 
-### Part 1
+AUTOMATION FRAMEWORK
+Framework set up instruction.
+BDD framework(Maven based).
+1) fork the project;
+2) add Framework support -> maven (add POM.XML);
+3) Open POM.XML file -> add dependencies-> add to project following dependencies:
+-selenium-java;
+-webdrivermanager (io.github.bonigarcia);
+-javafaker;
+-cucumber-java;
+-cucumber-junit (version must be same with cucumber-java);
+-reporting-plugin.
 
-Devise a set of test scenarios / acceptance criteria that covers enough breadth of this feature for a daily smoke test.
+4) create project structure:
+under package java create packages: com, utility. Under package com create packages: pages, runner, step_definition
 
-A few asks and helpful tips:
-- Keep your focus to just the scheduling page (https://www.zoomcare.com/schedule). Anything else is not within scope of this challenge.
-- If you click on a time slot, it will redirect you to a login screen if you don't have an account. We aren't concerned with the behavior past this point; focus on the behavior that displays to an unauthenticated guest just browsing our schedule. You can make an account if you wish, but these are real appointments - **please do not actually schedule any appointments for testing**.
-- We know there are many, many links on our website. Be selective in which links you want to verify work, and what page they should open up under what condition.
-- Prioritize your plan; try to keep your list to 8-10 test cases.
-- We're interested in testing the application's front-end user interface, from an end-to-end perspective. Thinking about what the back-end (ie. API endpoint) does is useful, but is not a requirement for this challenge.
-- Think about the entire workflow: what happens if you change X parameter? Does Y also change depending on X? What about things changing without any interaction after a period of time?
 
-### Part 2
+Noticed:
 
-Take at least three cases that you've written in Part 1, and propose how they would transfer into an automated test by coding/scripting them with a framework and/or tool. Use whatever you're comfortable with (Selenium, Cypress, etc.), and you can write in any programming/scripting language you choose.
+1) overleaping  of text
+Seattle, WA -> Physical Therapy -> date -> refresh -> View Clinic Service = text overleaping
 
-What we're looking for:
-- Verifying you can write code and/or script well (knowledge of built-in functions for your chosen language, good organization of classes/functions, reasonable use of comments, etc.)
-- You have a clear vision for how to automate (using POM or Screenplay methodology, BDD or TDD best practices, etc.)
-- You know how to get the results you need (knowledge of the framework(s) and libraries chosen, and using their functionality appropriately)
-- Working code is good. Pretty working code is better. Fast, pretty, working code is best.
+2) next available date is not displaying next available time
+Portland, OR -> Mental Health Med&More-> date -> search ->"next available: date" button = not displaying available time
+
+3) see "show more" option not extend list
+Seattle, WA -> illness/Injury->date-> Refresh -> scroll down -> click "show more" button = list not extended, "show more" button not disappear 
+
+4) chosen date is not matched with date throughout list of displaying services
+Portland, MO -> any service-> date -> refresh = chosen date is not matched with date into list of displaying services
