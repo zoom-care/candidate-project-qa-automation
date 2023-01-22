@@ -1,5 +1,5 @@
 @Smoke
-Feature:
+Feature: checking of schedule an appointment functionality
 
 
   Scenario: US3AC1: to verify user should be able to define clinic location in his/her area
