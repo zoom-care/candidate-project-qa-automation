@@ -1,8 +1,8 @@
 package Sergei.com.steps_definition;
 
 import Sergei.com.pages.SchedulePage;
-import Sergei.utility.BrowserUtil;
-import Sergei.utility.Driver;
+import Sergei.utility.browserUtil;
+import Sergei.utility.driver;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,7 +24,7 @@ public class US_2_as_user_I_should_be_able_to_schedule_appointment {
 
     @When("user click on schedule module")
     public void user_click_on_schedule_module() {
-        BrowserUtil.sleep(4);
+        browserUtil.sleep(3);
         schedulePage.ScheduleModule.click();
 
     }
@@ -32,7 +32,7 @@ public class US_2_as_user_I_should_be_able_to_schedule_appointment {
     @When("user choose clinic location")
     public void user_choose_clinic_location() {
 
-        BrowserUtil.sleep(4);
+        browserUtil.sleep(4);
         schedulePage.clinicLocationDrop.click();
         List<WebElement> allLocations = schedulePage.allLocations;
         int randomNumLocations = faker.number().numberBetween(0, allLocations.size() - 1);
@@ -65,7 +65,7 @@ public class US_2_as_user_I_should_be_able_to_schedule_appointment {
 
     @When("user choose available date")
     public void user_choose_available_date() {
-        BrowserUtil.sleep(2);
+        browserUtil.sleep(2);
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd");
         LocalDate localDate = new LocalDate();
@@ -86,7 +86,7 @@ public class US_2_as_user_I_should_be_able_to_schedule_appointment {
 
     @When("user click on search button")
     public void user_click_on_search_button() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
+        WebDriverWait wait = new WebDriverWait(driver.getDriver(), 5);
 
         wait.until(ExpectedConditions.elementToBeClickable(schedulePage.searchButton)).click();
 
@@ -95,7 +95,7 @@ public class US_2_as_user_I_should_be_able_to_schedule_appointment {
 
     @Then("use should able to see list of availabilities and defined date")
     public void use_should_able_to_see_list_of_availabilities_and_defined_date() {
-        BrowserUtil.sleep(3);
+        browserUtil.sleep(3);
 
 // Assertion
         System.out.println("Chosen service " + chosenService);
@@ -111,7 +111,7 @@ public class US_2_as_user_I_should_be_able_to_schedule_appointment {
 
     @When("user choose {string} dropdown")
     public void user_choose_dropdown(String clinicLocation) {
-        BrowserUtil.sleep(3);
+        browserUtil.sleep(3);
         schedulePage.switchLocation(clinicLocation);
 
     }

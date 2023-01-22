@@ -1,10 +1,9 @@
 @Smoke
-Feature: US 3 user should be able to define clinic location
-  1 AC: user should be able to choose "USE MY LOCATION" to define clinic
-  2 AC: user should be able to choose clinic location manually in case if there is no location in user area
+Feature:
 
 
-  Scenario: 1 AC: user should be able to choose "USE MY LOCATION" to define clinic
+  Scenario: US3AC1: to verify user should be able to define clinic location in his/her area
+  Description: user should be able to choose "USE MY LOCATION" to define clinic in his/her area.
     Given user on home page
     When user click on schedule module
     And user choose "Portland, OR" location
@@ -12,7 +11,8 @@ Feature: US 3 user should be able to define clinic location
     Then user see message "We're not in your area yet"
 
 
-  Scenario:   2 AC: user should be able to choose clinic location manually in case if there is no location in user area
+  Scenario:   US3AC2: to verify user able to see clinic location from given list
+  Description: user should be able to choose clinic location manually in case if there is no location in user area.
     Given user on home page
     When user click on schedule module
     And click on clinic location module

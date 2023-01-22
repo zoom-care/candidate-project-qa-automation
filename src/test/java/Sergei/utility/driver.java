@@ -6,23 +6,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class Driver {
+public class driver {
 
 
     // singleton Design pattern implemented
 
-    private Driver() {
+    private driver() {
     }
 
-
-
-
-    private static WebDriver driver; // first time it will be null
+    private static WebDriver driver;
 
     public static WebDriver getDriver() {
 
         if (driver == null) {
-            String browserType = ConfigurationReader.getProperty("browser").toLowerCase();
+            String browserType = configurationReader.getProperty("browser").toLowerCase();
             switch (browserType) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
@@ -44,16 +41,14 @@ public class Driver {
                     break;
             }
         }
-
-//same driver instance will be return every time we call Driver.getDriver() method
         return driver;
     }
 
     // we use that method to close opened driver
     public static void closeDriver (){
         if (driver!= null) {
-            driver.quit(); // this line kill the current session, value will NOT null, because driver object still exist
-            driver = null; //- we assign driver object value NULL, now driver is null
+            driver.quit();
+            driver = null;
         }
     }
 

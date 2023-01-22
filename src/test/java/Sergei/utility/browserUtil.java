@@ -1,6 +1,8 @@
 package Sergei.utility;
 
-public class BrowserUtil {
+public class browserUtil {
+
+    //couple examples of static methods for UI testing
 
     public static void sleep(int sec) {
 
@@ -16,11 +18,9 @@ public class BrowserUtil {
     }
 
     public static String titleVerification(){
-      return Driver.getDriver().getTitle();
+      return driver.getDriver().getTitle();
 
 
     }
-
-
 
 }

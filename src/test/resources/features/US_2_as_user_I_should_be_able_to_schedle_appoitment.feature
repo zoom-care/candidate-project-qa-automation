@@ -1,14 +1,8 @@
 @Smoke
-Feature: as user I should be able to schedule an appointment
-  1 AC:
-  - as user I should be able to choose "Location" of clinic, choose Service, choose Date, "Search" button is enable (random data).
-  2 AC:
-  -  if user did not choose specific Service "Choose Date" dropdown should be disabled, if user click on it "Please choose a service" text appear, search button disabled.
-  3 AC:
-  - as user I should be able to see list of services for each clinic (two point verification).
+Feature: checking of schedule an appointment functionality
 
-
-  Scenario: 1 AC: as user I should be able to choose "Location" of clinic, "Choose Service", "Choose Date", "Search" button is enable (random data)
+  Scenario: US2AC1: to verify user should be able to schedule an appointment.
+  Description: as user I should be able to click "choose location" of clinic, "choose Service", "choose Date", click " Search" button and see list of availabilities (random data).
     Given user on home page
     When user click on schedule module
     And user choose clinic location
@@ -18,8 +12,8 @@ Feature: as user I should be able to schedule an appointment
     Then use should able to see list of availabilities and defined date
 
 
-  Scenario Outline: 2 AC: if user did not choose specific Service "Choose Date" dropdown should be disabled
-  if user did not choose specific Service "Choose Date" dropdown should be disabled, if user click on it "Please choose a service" text appear
+  Scenario Outline: US2AC2: to verify that the user cannot determine the date if the service has not been specified
+  Description: if user did not choose specific service "Choose Date" dropdown should be disabled. If user click on it "Please choose a service" text appear.
 
     Given user on home page
     When user click on schedule module
@@ -37,7 +31,8 @@ Feature: as user I should be able to schedule an appointment
       | Boulder, CO     |
       | Boise, ID       |
 
-Scenario Outline: 3 AC as user I should be able to see list of services for each clinic
+Scenario Outline: US2AC3: to verify list of services for each clinic
+Description: as user I should be able to see list of services for clinic (two point verification).
   Given user on home page
   When user click on schedule module
   And user choose "<Clinic location>" dropdown

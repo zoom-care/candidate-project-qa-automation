@@ -1,8 +1,8 @@
 package Sergei.com.steps_definition;
 
 import Sergei.com.pages.SchedulePage;
-import Sergei.utility.BrowserUtil;
-import Sergei.utility.Driver;
+import Sergei.utility.browserUtil;
+import Sergei.utility.driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -17,19 +17,19 @@ import java.util.List;
 
 public class US_3_user_should_be_able_to_choose_clinic_location {
     SchedulePage schedulePage = new SchedulePage();
-    Actions actions = new Actions(Driver.getDriver());
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+    Actions actions = new Actions(driver.getDriver());
+    WebDriverWait wait = new WebDriverWait(driver.getDriver(), 10);
 
     @When("user choose {string} location")
     public void user_choose_location(String portlandLocation) {
-        BrowserUtil.sleep(3);
+        browserUtil.sleep(3);
         schedulePage.switchLocation(portlandLocation);
 
     }
 
     @When("user choose {string} option")
     public void user_choose_option(String myLocation) {
-        BrowserUtil.sleep(3);
+        browserUtil.sleep(3);
         schedulePage.clinicLocationDrop.click();
         actions.moveToElement(schedulePage.useMyLocation).click().perform();
 
@@ -49,7 +49,7 @@ public class US_3_user_should_be_able_to_choose_clinic_location {
     @When("click on clinic location module")
     public void click_on_clinic_location_module() {
 
-        wait.until(ExpectedConditions.visibilityOf(Driver.getDriver().findElement(By.xpath("//button[@data-testid='virtualClinicBox']"))));
+        wait.until(ExpectedConditions.visibilityOf(driver.getDriver().findElement(By.xpath("//button[@data-testid='virtualClinicBox']"))));
         actions.moveToElement(schedulePage.clinicLocationDrop).click().perform();
 
     }

@@ -1,6 +1,6 @@
 package Sergei.com.pages;
 
-import Sergei.utility.Driver;
+import Sergei.utility.driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,8 +10,12 @@ import java.util.List;
 
 public class SchedulePage extends BasePage {
 
+    // that class has been extended by BasePage class
+    // page object model design pattern implemented
+
+
     public SchedulePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(driver.getDriver(), this);
     }
 
     @FindBy(xpath = "(//div[@class='css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-1otgn73'])[1]")
@@ -51,11 +55,11 @@ public class SchedulePage extends BasePage {
 
     public void switchLocation(String location) {
         clinicLocationDrop.click();
-        Driver.getDriver().findElement(By.xpath("//div[@data-testid='text-quick-selector-option-location-" + location + "']")).click();
+        driver.getDriver().findElement(By.xpath("//div[@data-testid='text-quick-selector-option-location-" + location + "']")).click();
     }
 
     public WebElement switchAvailableDate (int date){
-      return Driver.getDriver().findElement(By.xpath("//div[text()='" + date + "']"));
+      return driver.getDriver().findElement(By.xpath("//div[text()='" + date + "']"));
 
     }
 

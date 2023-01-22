@@ -1,8 +1,8 @@
 package Sergei.com.steps_definition;
 
 import Sergei.com.pages.SchedulePage;
-import Sergei.utility.BrowserUtil;
-import Sergei.utility.Driver;
+import Sergei.utility.browserUtil;
+import Sergei.utility.driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -27,7 +27,7 @@ public class US_1_user_should_be_able_to_see_main_modules {
     @When("use able to see main modules on home page")
     public void use_able_to_see_main_modules_on_home_page(List<String> list) {
 
-        List<WebElement> listOfWebElements = Driver.getDriver().findElements(By.xpath("//a[contains(@id,'nav-')]"));
+        List<WebElement> listOfWebElements = driver.getDriver().findElements(By.xpath("//a[contains(@id,'nav-')]"));
 
         List<String> listOfActualModules = new ArrayList<>();
 
@@ -64,7 +64,7 @@ public class US_1_user_should_be_able_to_see_main_modules {
     public void user_click(String module) {
 
 
-        BrowserUtil.sleep(2);
+        browserUtil.sleep(2);
 
         schedulePage.switchMainModules(module);
 
@@ -72,13 +72,13 @@ public class US_1_user_should_be_able_to_see_main_modules {
 
     @Then("user see page related each module and title of pages contains {string} name")
     public void user_see_page_related_each_module_and_title_of_pages_contains_name(String expectedTitle) {
-        BrowserUtil.sleep(2);
+        browserUtil.sleep(2);
 
-        System.out.println("Actual title " + BrowserUtil.titleVerification());
+        System.out.println("Actual title " + browserUtil.titleVerification());
         System.out.println("Expected title " + expectedTitle);
 
         //Assertion
-        Assert.assertTrue("TITLE NOT MATCHED ", BrowserUtil.titleVerification().contains(expectedTitle));
+        Assert.assertTrue("TITLE NOT MATCHED ", browserUtil.titleVerification().contains(expectedTitle));
 
 
     }

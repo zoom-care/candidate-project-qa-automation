@@ -1,6 +1,6 @@
 package Sergei.com.pages;
 
-import Sergei.utility.Driver;
+import Sergei.utility.driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +10,7 @@ public class BasePage {
     // page object model design pattern implemented
 
     public BasePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(driver.getDriver(), this);
     }
 
     @FindBy(id = "nav-schedule")
@@ -35,7 +35,7 @@ public class BasePage {
 
 
     public void switchMainModules(String moduleName) {
-        Driver.getDriver().findElement(By.xpath("//a[text()='" + moduleName + "']")).click();
+        driver.getDriver().findElement(By.xpath("//a[text()='" + moduleName + "']")).click();
 
     }
 

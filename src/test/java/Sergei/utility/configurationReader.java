@@ -4,8 +4,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigurationReader {
+public class configurationReader {
 
+
+// that code help us to read data from configuration.properties file, and use that data where we need in framework
     private static Properties properties = new Properties();
 
     static {
@@ -18,7 +20,6 @@ public class ConfigurationReader {
         } catch (IOException e) {
             e.printStackTrace();
        }
-
     }
     public static String getProperty (String keyword){
 
