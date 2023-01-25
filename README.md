@@ -1,45 +1,117 @@
-# ZoomCare Candidate Code Challenge - QA / Automation
+TEST CASES:
 
-![ZoomCare Logo](https://avatars0.githubusercontent.com/u/48925141?s=150)
+1. Feature: Scheduling page verification
 
-Welcome to the ZoomCare QA / Automation Candidate Code Challenge. If you are here you most likely have interest in joining the ZoomCare Quality Engineering Team and have been asked to respond to this challenge. If you came here on your own, you are welcome to explore the challenge and use it to sharpen your skills or prepare for future interviews.
+Scenario: Verify that the page loads correctly by navigating to it
 
-The ZoomCare Candidate Code Challenges are intended to take around 2-3 hours to complete. This is not intended to be an extensive test of your programing skills or knowledge, but rather as a starting point for further conversations during the application process.
+Given User navigates to the https://www.zoomcare.com/schedule
 
-## Instructions
+Then  User should be able to see scheduling page
 
-This Candidate Code Challenge is geared specifically toward QA Engineers with end-to-end testing and programming experience. The challenge is split into two parts: the first is to devise a test plan for the prompt provided, while the second is to create a basic automation framework that executes some of the test cases written. Both parts are of equal importance, but you'll likely spend more time on Part 2 (automation).
+2. Feature: Location Selection
 
-Specifically:
-1. Create a fork of this repository into your personal GitHub space.
-2. Wipe the contents of this README file, and in its place, create two sections: Test Cases and Automation Instructions.
-3. Use the Test Cases section in the README file to write all of your test cases in response to the first part.
-4. Set up an automation framework and its associated pages/specs/utilities/etc within the repository.
-5. Use the Automation Instructions section in the README to provide instructions for how to set up the framework. Assume the user has nothing pre-installed and also does not know how to use the framework you chose.
-7. Create a Pull Request back to the original project.
+Scenario: Verify if the user is able to select a location from a dropdown list
 
-## Prompt
+Given User is on the landing page
 
-ZoomCare has a unique promise: we make healthcare delightful by giving it to you on your terms. No matter where or when you want care, ZoomCare can provide complete care for all that ails them, in the palm of their hand. The most critical way we deliver on that promise is through our online scheduling system, which is completely self-service by our patients and coordinates the vast majority of appointments we serve. We call this the "Search/Sechedule Moment". Simply visit our public website at https://www.zoomcare.com, and you'll immediately be greeted with a scheduler to get you on your way.
+Then  User is able to select any available clinic locations from the list
 
-### Part 1
+3. Feature: Service Selection
 
-Devise a set of test scenarios / acceptance criteria that covers enough breadth of this feature for a daily smoke test.
+Scenario: Verify if the user is able to select needed service
 
-A few asks and helpful tips:
-- Keep your focus to just the scheduling page (https://www.zoomcare.com/schedule). Anything else is not within scope of this challenge.
-- If you click on a time slot, it will redirect you to a login screen if you don't have an account. We aren't concerned with the behavior past this point; focus on the behavior that displays to an unauthenticated guest just browsing our schedule. You can make an account if you wish, but these are real appointments - **please do not actually schedule any appointments for testing**.
-- We know there are many, many links on our website. Be selective in which links you want to verify work, and what page they should open up under what condition.
-- Prioritize your plan; try to keep your list to 8-10 test cases.
-- We're interested in testing the application's front-end user interface, from an end-to-end perspective. Thinking about what the back-end (ie. API endpoint) does is useful, but is not a requirement for this challenge.
-- Think about the entire workflow: what happens if you change X parameter? Does Y also change depending on X? What about things changing without any interaction after a period of time?
+Given User is on the landing page
 
-### Part 2
+When  User clicks on services' dropdown box
 
-Take at least three cases that you've written in Part 1, and propose how they would transfer into an automated test by coding/scripting them with a framework and/or tool. Use whatever you're comfortable with (Selenium, Cypress, etc.), and you can write in any programming/scripting language you choose.
+Then  User is able to select any necessary service from the list
 
-What we're looking for:
-- Verifying you can write code and/or script well (knowledge of built-in functions for your chosen language, good organization of classes/functions, reasonable use of comments, etc.)
-- You have a clear vision for how to automate (using POM or Screenplay methodology, BDD or TDD best practices, etc.)
-- You know how to get the results you need (knowledge of the framework(s) and libraries chosen, and using their functionality appropriately)
-- Working code is good. Pretty working code is better. Fast, pretty, working code is best.
+4. Feature: Date Selection
+
+Scenario: Verify if the user is able to select a date from a dropdown list
+
+Given User is on the landing page
+
+When  User clicks on date dropdown box
+
+Then  User is able to select any available date from the list
+
+5. Feature: Search functionality verification
+
+Scenario: Verify if search box is working as expected
+
+Given User is on the landing page
+
+When  User clicks all three options from dropdown menu boxes
+
+Then  User is able to click search button
+
+
+6. Feature: Care Type Selection
+
+Scenario: Verify that the user can select particular care for his/her needs
+
+Given User is on the landing page
+
+Then  User should be able to choose any of three available care options
+
+Then  User verifies that the result is as expected
+
+7. Feature: Error message verification
+
+Scenario: Verify that the error message appears when submit unavailable date
+
+Given User is on the landing page
+
+When User selects "Vancouver, WA" from location dropdown
+
+And User selects "Primary Care" from services dropdown
+
+And   User selects first available date from the calendar
+
+Then  "The selected day is not available." message should appear if date is unavailable
+
+
+8. Feature: Search functionality verification
+
+Scenario: Verify if search box is working as expected
+
+Given User is on the landing page
+
+When  User selects "Seattle, WA" from dropdown menu
+
+And   User selects "Mental Health Meds & More" service
+from dropdown menu
+
+And   User selects a first available date from dates dropdown menu
+
+Then  User is able to click search button
+
+
+9. Feature : Correct address verification
+
+Given User is on the landing page
+
+When  User selects "Seattle, WA" from dropdown menu
+
+And   User selects "Mental Health Meds & More" service  from dropdown menu
+
+And   User selects a first available date from dates dropdown menu
+
+And   User clicks search button
+
+Then  Verify if the address is as expected
+
+
+
+AUTOMATION INSTRUCTIONS:
+
+Creating framework starts from creating a new project. Before setting up anything I decided what tools I would use. Decided to use Cucumber BDD framework that is based on POM design pattern using Selenium WebDriver, Maven and JUnit. In the framework I am using Java as my main programming language.
+Added all the necessary dependencies into pom.xml file, updated Maven. Created separate packages for pages, step_definitions, utilities and runners. Created resources directory on the test level and config.properties and .gitignore file on project level. Resources hold feature files with all the test cases using Gherkin language, and config.properties directory helps me with test data which I am using throughout the project. .gitignore file needed for those files that should be ignored.
+
+Then I started to modify each package.
+
+Runner package has two classes: Runner helps me to run particular test cases using tags and generates cucumber report using plugin,  and FailedRunner for rerunning only those testCases that failed.
+Added useful classes to utilities package. Driver is designed based on Singleton Design Pattern to make sure that I am using single instance of the driver throughout the project. And also it contains ConfigReader class that helps me to read important data from config.properties file.
+Pages package holds page classes with all necessary WebElements and useful methods using PageFactory class for initializing.
+Step_Definitions package contains classes for actual TestScripts, and Hooks class that helps me to take Screenshot for failed TestCases. 
