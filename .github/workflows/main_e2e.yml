@@ -1,0 +1,20 @@
+name: Cypress E2E tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out code 🛎
+        uses: actions/checkout@v3
+      - name: Cypress tests 🧪
+        uses: cypress-io/github-action@v5
+        timeout-minutes: 10
+        with:
+          command: npm run cy:e2e:chrome
+      - name: Uploading artifact 🗂
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-execution-report
+          path: cypress/reports/html
+          retention-days: 30
