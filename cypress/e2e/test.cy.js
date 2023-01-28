@@ -1,10 +1,12 @@
 /// <reference types="Cypress" />
 
-describe("This is your test project title", () => {
-  it("This is your test case one title", () => {
-    cy.visit("/");
-    cy.get("[data-testid='quickSelector.location.popover']").should(
-      "be.visible"
-    );
+describe("ZoomCare - Search/Schedule Moment", () => {
+  describe("Open and Select a Location from the list", () => {
+    it("should filter and show the list of available services", () => {
+      cy.visit("/");
+      cy.get("[data-testid='quickSelector.location.popover']").should(
+        "be.visible"
+      );
+    });
   });
 });
