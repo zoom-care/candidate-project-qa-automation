@@ -16,7 +16,7 @@ module.exports = defineConfig({
   video: false,
   reporterOptions: {
     charts: true,
-    reportPageTitle: "Cypress Saucedemo Report",
+    reportPageTitle: "Cypress ZoomCare Report",
     embeddedScreenshots: true,
     inlineAssets: true, //Adds the asserts inline
     saveAllAttempts: false,
