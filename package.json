@@ -1,0 +1,29 @@
+{
+  "name": "zoomcare-e2e-tests",
+  "version": "1.0.0",
+  "description": "E2E Tests for Zoomcare website",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --e2e"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuigiAble/candidate-project-qa-automation.git"
+  },
+  "keywords": [
+    "E2E",
+    "QA",
+    "Cypress",
+    "Automation"
+  ],
+  "author": "Luigi Aguirre Charco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuigiAble/candidate-project-qa-automation/issues"
+  },
+  "homepage": "https://github.com/LuigiAble/candidate-project-qa-automation#readme",
+  "devDependencies": {
+    "cypress": "^12.3.0",
+    "cypress-mochawesome-reporter": "^3.2.3"
+  }
+}
