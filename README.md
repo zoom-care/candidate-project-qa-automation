@@ -4,20 +4,17 @@
 
 # Section 1: Smoke Test Cases
 
-1. Verify a **Selected Location** filters and shows the list of available services
-2. Verify that **Search Clinics** displays the correct information in service line section
-3. Verify **Empty State** message is displayed when selected days does not get results
-4. Verify **Load Slots** shows other available options to schedule an appointment
+1. Verify that **Search Clinics** displays the correct information in service line section
+2. Verify **Clinic, Clinic Services and Provider Details** options show the correct information
+3. Verify a **Selected Location** filters and shows the list of available services
+4. Verify **Empty State** message is displayed when selected days does not get results
 5. Verify **You're almost there modal** displays when getting back from Login Page
 6. Verify **Load More** option shows other 5 results
-7. Verify **View Clinic Services** options shows the details of services given in that clinic
-8. Verify **Service info** tooltip displays its detailed information
-9. Verify **Emergency Care** service does not load the calendar
-10. Verify **Clinic and Provider Details** options show the correct information
+7. Verify **Load Slots** shows other available options to schedule an appointment
+8. Verify **Emergency Care** service does not load the calendar
+9. Verify **Service info** tooltip displays its detailed information
 
-## Section 2: Automation Instructions.
-
-[![Cypress E2E tests - Update](https://github.com/LuigiAble/candidate-project-qa-automation/actions/workflows/main_e2e.yml/badge.svg)](https://github.com/LuigiAble/candidate-project-qa-automation/actions/workflows/main_e2e.yml)
+# Section 2: Automation Instructions.
 
 ## Getting Started
 
