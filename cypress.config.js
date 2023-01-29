@@ -4,6 +4,8 @@ module.exports = defineConfig({
   // Global configuration: These settings are applicable for both e2e and component
   videoUploadOnPasses: false,
   watchForFileChanges: false,
+  pageLoadTimeout: 120000,
+  responseTimeout: 30000,
   viewportHeight: 1080,
   viewportWidth: 1920,
   chromeWebSecurity: false,
@@ -29,5 +31,8 @@ module.exports = defineConfig({
     },
     baseUrl: "https://www.zoomcare.com/schedule",
     testIsolation: false,
+  },
+  env: {
+    prodHost: "https://api-prod.zoomcare.com/v1",
   },
 });
