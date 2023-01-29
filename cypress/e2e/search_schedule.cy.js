@@ -92,7 +92,3 @@ describe("ZoomCare - Search/Schedule Moment", () => {
     });
   });
 });
-
-// cy.wait("@schedule").its("response.statusCode").should("eq", 200);
-//   cy.wait("@serviceLines");
-//   cy.get("#animatedComponent").should("not.exist");
