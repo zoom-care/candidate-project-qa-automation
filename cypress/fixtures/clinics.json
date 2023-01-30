@@ -1,0 +1,17 @@
+[
+  {
+    "service": "5-Minute Flu Shot",
+    "location": "Seattle, WA",
+    "title": "Flu Shots"
+  },
+  {
+    "service": "Pediatric COVID-19 Screening",
+    "location": "Salem, OR",
+    "title": "COVID-19 Screening Video Visit"
+  },
+  {
+    "service": "Primary Care",
+    "location": "Portland, OR",
+    "title": "Primary Care"
+  }
+]

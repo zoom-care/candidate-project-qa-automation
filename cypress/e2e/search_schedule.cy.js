@@ -2,12 +2,13 @@
 
 import ClinicProviderPage from "../pages/ClinicProviderPage";
 import ClinicServicesPage from "../pages/ClinicServicesPage";
-import SchedulePage, { selectClinicLotation } from "../pages/SchedulePage";
+import SchedulePage from "../pages/SchedulePage";
 import SearchOptionsPage from "../pages/SearchOptionsPage";
+import ServicesByLocation from "../fixtures/services_by_location.json";
+import SearchClinics from "../fixtures/clinics.json";
 
 const date = new Date();
 const getDay = date.getDate() + 1;
-const TITLE = "COVID-19 Screening Video Visit";
 
 describe("ZoomCare - Search/Schedule Moment", () => {
   context("Search for Clinics and displays the correct information", () => {
@@ -17,28 +18,32 @@ describe("ZoomCare - Search/Schedule Moment", () => {
       SchedulePage.elements.serviceLineSection().should("be.visible");
     });
 
-    it("should open and select a Location", () => {
-      SearchOptionsPage.openLocationToggle();
-      SearchOptionsPage.selectLocation("Seattle, WA");
-    });
+    for (const clinic of SearchClinics) {
+      it("should open and select a Location", () => {
+        SearchOptionsPage.openLocationToggle();
+        SearchOptionsPage.selectLocation(clinic.location);
+      });
 
-    it("should open and select a Service", () => {
-      SearchOptionsPage.openServiceToggle();
-      SearchOptionsPage.selectService("Adult COVID-19 Screening");
-    });
+      it("should open and select a Service", () => {
+        SearchOptionsPage.openServiceToggle();
+        SearchOptionsPage.selectService(clinic.service);
+      });
 
-    it("should open, select a Date from Calendar and search", () => {
-      SearchOptionsPage.openCalendarToggle();
-      SearchOptionsPage.selectDateFromCalendar(getDay);
-      SearchOptionsPage.clickOnSearch();
-    });
+      it("should open, select a Date from Calendar and search", () => {
+        SearchOptionsPage.openCalendarToggle();
+        SearchOptionsPage.selectDateFromCalendar(getDay);
+        SearchOptionsPage.clickOnSearch();
+      });
 
-    it("should open and select a Service", () => {
-      SchedulePage.elements.serviceLineTitle().should("contain.text", TITLE);
-      SchedulePage.elements.serviceLineSection().should("have.length", 6);
-      SchedulePage.clickOnShowMore();
-      SchedulePage.elements.serviceLineSection().should("have.length", 11);
-    });
+      it("should open and select a Service", () => {
+        SchedulePage.elements
+          .serviceLineTitle()
+          .should("contain.text", clinic.title);
+        SchedulePage.elements.serviceLineSection().should("have.length", 6);
+        SchedulePage.clickOnShowMore();
+        SchedulePage.elements.serviceLineSection().should("have.length", 11);
+      });
+    }
   });
 
   context(
@@ -70,25 +75,15 @@ describe("ZoomCare - Search/Schedule Moment", () => {
       SchedulePage.elements.serviceLineSection().should("be.visible");
     });
 
-    it("should select Portland and display 17 available services", () => {
-      SearchOptionsPage.openLocationToggle();
-      SearchOptionsPage.selectLocation("Portland, OR");
-      SearchOptionsPage.openServiceToggle();
-      SearchOptionsPage.elements.serviceOptions().should("have.length", 17);
-    });
-
-    it("should select Vancouver and display 9 available services", () => {
-      SearchOptionsPage.openLocationToggle();
-      SearchOptionsPage.selectLocation("Vancouver, WA");
-      SearchOptionsPage.openServiceToggle();
-      SearchOptionsPage.elements.serviceOptions().should("have.length", 9);
-    });
-
-    it("should select Boise and display 6 available services", () => {
-      SearchOptionsPage.openLocationToggle();
-      SearchOptionsPage.selectLocation("Boise, ID");
-      SearchOptionsPage.openServiceToggle();
-      SearchOptionsPage.elements.serviceOptions().should("have.length", 6);
-    });
+    for (const service of ServicesByLocation) {
+      it(`should select ${service.location} and display ${service.total_services} available services`, () => {
+        SearchOptionsPage.openLocationToggle();
+        SearchOptionsPage.selectLocation(service.location);
+        SearchOptionsPage.openServiceToggle();
+        SearchOptionsPage.elements
+          .serviceOptions()
+          .should("have.length", service.total_services);
+      });
+    }
   });
 });

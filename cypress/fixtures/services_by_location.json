@@ -1,0 +1,14 @@
+[
+  {
+    "location": "Portland, OR",
+    "total_services": 17
+  },
+  {
+    "location": "Vancouver, WA",
+    "total_services": 9
+  },
+  {
+    "location": "Boise, ID",
+    "total_services": 6
+  }
+]
