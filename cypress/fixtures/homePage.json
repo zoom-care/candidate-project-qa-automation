@@ -1,0 +1,12 @@
+{
+    "url": "https://www.zoomcare.com/",
+    "textBannerDiv": "[data-testid='text-Schedule your visit']",
+    "locationSelector": "[data-testid='quickSelector.location.popover']",
+    "serviceSelector": "[data-testid='quickSelector.service.popover']",
+    "searchButton": "[data-testid='button-quickSelector.searchButton']",
+
+
+    "DermatologyService": "[data-testid='text-quick-selector-option-service-Dermatology']",
+    "locationPortland": "[data-testid='text-quick-selector-option-location-Portland, OR']"
+
+}

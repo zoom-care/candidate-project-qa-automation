@@ -1,0 +1,11 @@
+{
+    "url": "https://www.zoomcare.com/schedule",
+    "locationSelector": "[data-testid='quickSelector.location.popover']",
+    "serviceSelector": "[data-testid='quickSelector.service.popover']",
+    "searchButton": "[data-testid='button-quickSelector.searchButton']",
+    "clinicCareButton": "[data-testid='virtualClinicBox']",
+    "videoCareButton": "[data-testid='virtualVideoBox']",
+
+    "DermatologyService": "[data-testid='text-quick-selector-option-service-Illness/Injury']",
+    "locationPortland": "[data-testid='text-quick-selector-option-location-Portland, OR']"
+}
