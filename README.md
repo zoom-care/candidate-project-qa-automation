@@ -1,45 +1,115 @@
-# ZoomCare Candidate Code Challenge - QA / Automation
+Section One: Test Scenario and Test Case writing 
 
-![ZoomCare Logo](https://avatars0.githubusercontent.com/u/48925141?s=150)
+Test navigation Links:
+1) Navigate to www.zoomcare.com
+2)On page load the top navigation bar should have 
+	four links up top.
+		Schedule
+		Location
+		services 
+		Pricing and insurance
 
-Welcome to the ZoomCare QA / Automation Candidate Code Challenge. If you are here you most likely have interest in joining the ZoomCare Quality Engineering Team and have been asked to respond to this challenge. If you came here on your own, you are welcome to explore the challenge and use it to sharpen your skills or prepare for future interviews.
+3) Click Schedule
+4) User should be navigated to appointment schduling page 
+5) click logo to be routed back to home.
+6) Next Click the location link  
+7) Locations link 
+8) User should be routed to locations screen. here a display of each available city should be at the top
+9) further down page each city should have a corresponding list of locations 
+10) cick logo to be routed back to the homepage 
+11) Once on homepage, click Services link in the navigation bar
+12) Once navigated to the services user should see a list of services on screen ensure page layout matches design spec.
+13) Click logo to return home 
+14) Click the Pricing and Insurance link
+15) User will be navigated to the Pricing and Insurance  page 
+16)Page layout should have Pricing and insurance table and information.
 
-The ZoomCare Candidate Code Challenges are intended to take around 2-3 hours to complete. This is not intended to be an extensive test of your programing skills or knowledge, but rather as a starting point for further conversations during the application process.
 
-## Instructions
+Test Schedule a Visit in the Card on the homepage:
+1) from the Homepage click on the select a location dropdown 
+2) make a selection on the page 
+3) From that selection  move to next dropdown
+4) Choose service from dropdown
+5) Click Schedule Now to be routed to schduling page.
 
-This Candidate Code Challenge is geared specifically toward QA Engineers with end-to-end testing and programming experience. The challenge is split into two parts: the first is to devise a test plan for the prompt provided, while the second is to create a basic automation framework that executes some of the test cases written. Both parts are of equal importance, but you'll likely spend more time on Part 2 (automation).
+Ensure that schduleing modal does not let user proceed without selecting correct information:
+1) navigate to the the scheduling card 
+2)Make no selections in dropdown
+3) click the scheduling button 
+4) the button should be disabled.
+5)User should remain on homepage
 
-Specifically:
-1. Create a fork of this repository into your personal GitHub space.
-2. Wipe the contents of this README file, and in its place, create two sections: Test Cases and Automation Instructions.
-3. Use the Test Cases section in the README file to write all of your test cases in response to the first part.
-4. Set up an automation framework and its associated pages/specs/utilities/etc within the repository.
-5. Use the Automation Instructions section in the README to provide instructions for how to set up the framework. Assume the user has nothing pre-installed and also does not know how to use the framework you chose.
-7. Create a Pull Request back to the original project.
 
-## Prompt
+Login to ZoomCare:
+1) Navigate to www.zoomcare.com
+2) From there on page load click the Login button at top right of screen
+3) User should be navigated to the to the sign-in page
+4)once on sign in page click sign-in button
+5)button should be disabled until valid data is logged 
+6) enter in email address ('Test@test.com')
+7) Enter password ("TestPassword")
+8) click "Sign In"
+9) for first time users a series of terms and conditions prompts should appear where the User has to accept the terms
+10) User should be prompt to click four check boxes with each check with T&A document 
+11) once all is accepted  User should be located on the home page.
+12) Button in Top right should now say Account and not login
 
-ZoomCare has a unique promise: we make healthcare delightful by giving it to you on your terms. No matter where or when you want care, ZoomCare can provide complete care for all that ails them, in the palm of their hand. The most critical way we deliver on that promise is through our online scheduling system, which is completely self-service by our patients and coordinates the vast majority of appointments we serve. We call this the "Search/Sechedule Moment". Simply visit our public website at https://www.zoomcare.com, and you'll immediately be greeted with a scheduler to get you on your way.
+LogOut of Zoomcare page:
+1) Navigate to www.zoomcare.com
+2) From there on page load click the Login button at top right of screen
+3) User should be navigated to the to the sign-in page
+4) once on sign in page click sign-in button
+5) button should be disabled until valid data is logged 
+6) enter in email address ('Test@test.com')
+7) Enter password ("TestPassword")
+8) click "Sign In"
+9) User should see homepage 
+10) Find Account link at the top of the page 
+11) Click the Account Link
+12) User should be navigated to Account settings game
+13) Click the logout button 
+14) once logged out 
+15) Account link should be switched to Login Button
 
-### Part 1
 
-Devise a set of test scenarios / acceptance criteria that covers enough breadth of this feature for a daily smoke test.
+HomePage link test for link Under Jumbotron:
+1) On home page find: Same-day Annual Wellness Exams are available!
+2) Click link to navigate to the same day Exams that are available 
+3) User should be navigated to the  exam Schduling page 
+4) page should match design spec and requirements
 
-A few asks and helpful tips:
-- Keep your focus to just the scheduling page (https://www.zoomcare.com/schedule). Anything else is not within scope of this challenge.
-- If you click on a time slot, it will redirect you to a login screen if you don't have an account. We aren't concerned with the behavior past this point; focus on the behavior that displays to an unauthenticated guest just browsing our schedule. You can make an account if you wish, but these are real appointments - **please do not actually schedule any appointments for testing**.
-- We know there are many, many links on our website. Be selective in which links you want to verify work, and what page they should open up under what condition.
-- Prioritize your plan; try to keep your list to 8-10 test cases.
-- We're interested in testing the application's front-end user interface, from an end-to-end perspective. Thinking about what the back-end (ie. API endpoint) does is useful, but is not a requirement for this challenge.
-- Think about the entire workflow: what happens if you change X parameter? Does Y also change depending on X? What about things changing without any interaction after a period of time?
 
-### Part 2
+Reviews section test: 
+1) on the - We brag about ourselves section 
+2) click the proceed arrows on the reviews section
+3)the carousel of reviews shoud move right 
+4) click the back arrow and its should move to the left of the screen 
 
-Take at least three cases that you've written in Part 1, and propose how they would transfer into an automated test by coding/scripting them with a framework and/or tool. Use whatever you're comfortable with (Selenium, Cypress, etc.), and you can write in any programming/scripting language you choose.
 
-What we're looking for:
-- Verifying you can write code and/or script well (knowledge of built-in functions for your chosen language, good organization of classes/functions, reasonable use of comments, etc.)
-- You have a clear vision for how to automate (using POM or Screenplay methodology, BDD or TDD best practices, etc.)
-- You know how to get the results you need (knowledge of the framework(s) and libraries chosen, and using their functionality appropriately)
-- Working code is good. Pretty working code is better. Fast, pretty, working code is best.
+Test Schedule a Visit button:
+1) Locate schedule a vist Button under EveryDay Specialty and Care section 
+2) Find Button and click button on the screen 
+3) User should be navigated to User SHould be navigate to Scheduling Phycisians screen  
+4) the time blocks of each phycisian should be visible.
+
+
+
+
+
+Section Two : Automation Instructions for MS Test
+
+Today we will be going over how to set up an automation project in MSusing C# as the Programming language.
+I will be using Visual Studio today. Open visual studio and the first thing that you user sees is the Create new Project modal. 
+CLick search bar and type Test or MSTest and framework should pop up. Select MsTest as the Project type and from there you, will choose the version of  C# that you will be working with, The most current is 6.0.
+Once Porject has been created, You need to add selenium and other dependencies in order to set up an autmation project. Got to the solution and select manage nuget packages. From there you add "SeleniumWebdriver", "SeleniumSupport",
+and then add Chromedriver to the project that you just created.
+Once packGES are all installed then from there you are able to begin with automation. You naviagte to the Unit test class that is set up and you can see that there is a class that is scaffolded out with a test methd inside. 
+You can add more methods or data in the file to set test up to run properly. 
+Ensure that the  Test Method attribute is over any method that you want ran. and you are also able to Use Assertions in order to show if a test passed or not. 
+If a test needs to be ran you can start through the test explorer or if you right click in the class you can start it right from the file Using the Run All Tests command, or Start Debuggin 
+ 
+
+
+
+
+
