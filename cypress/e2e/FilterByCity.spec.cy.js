@@ -8,7 +8,7 @@ describe('Filter Apts by city', () => {
         cy.get('[data-testid="quickSelector.location.popover"]').click()
         cy.get('[data-testid="text-USE MY LOCATION"]').should('exist')
         cy.get('[data-testid^="text-quick-selector-option-location-"]').contains(Cypress.config('defaultProviderCity')).should('exist')
-        cy.get('[data-testid="text-quick-selector-option-location-Seattle, WA"]').contains(Cypress.config('alternateProviderCity')).click()
+        cy.get('[data-testid^="text-quick-selector-option-location-]').contains(Cypress.config('alternateProviderCity')).click()
         cy.get('[data-testid="quickSelector.service.popover"]').click()
         cy.get('[data-testid="text-quick-selector-option-service-Illness/Injury"]').click()
         cy.wait(2000)
