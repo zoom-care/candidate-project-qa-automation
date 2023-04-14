@@ -2,7 +2,7 @@
 | TestId | Test Desc                        | Steps                                                    | Expectations                                                                               |
 |--------|----------------------------------|----------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | 1      | Load Main Page                   | open https://www.zoomcare.com/schedule in browser        | Page Loads Successfully with today's date showing appointment times after current time     |
-| 2      | Select Appointment               | Select an Appointment Time                               | Brought to authentication screen to login                                                  |
+| 2      | Select Appointment               | Select an Appointment Time                               | Brought to authentication screen to login or register with requirements                    |
 | 3      | City Select                      | Click on City Dropdown                                   | Dropdown should show cities close to current location                                      |
 | 4      | Filter by City                   | Select a new city for an illness injury appointment      | Appointment list should filter to new city selection                                       |
 | 5      | Services Select                  | Click on Services Selection dropdown                     | Relevent services to the location are shown                                                |
@@ -33,10 +33,12 @@ git clone git@github.com:zoom-care/candidate-project-qa-automation.git
 cd candidate-project-qa-automation
 npm i
 ```
-* Test cypress to verify installation
-    * Project should open in browser
-```shell
-npx cypress open
+* configure cypress.config.js variables 
+    * defaultProviderCity
+      * expected default city based on client locale/close zoomcare clinic locations
+    * alternateProviderCity
+      * expected alternate provider city based on client locale/close zoomcare clinic locations
+```javascript
 ```
 * Execute cypress tests
 ```shell
