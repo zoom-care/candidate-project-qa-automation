@@ -1,0 +1,22 @@
+{
+  "name": "candidate-project-qa-automation",
+  "version": "1.0.0",
+  "description": "![ZoomCare Logo](https://avatars0.githubusercontent.com/u/48925141?s=150)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alezrik/candidate-project-qa-automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alezrik/candidate-project-qa-automation/issues"
+  },
+  "homepage": "https://github.com/Alezrik/candidate-project-qa-automation#readme",
+  "devDependencies": {
+    "cypress": "^12.9.0"
+  }
+}
