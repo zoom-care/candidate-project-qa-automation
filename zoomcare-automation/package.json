@@ -1,0 +1,27 @@
+{
+    "name": "zoomcare-automation",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "commonjs",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "test:open": "wdio run ./wdio.conf.js",
+        "test:headless": "npx wdio run ./wdio.conf.headless.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wdio/cli": "^7.26.0",
+        "@wdio/local-runner": "^7.26.0",
+        "@wdio/mocha-framework": "^7.0.0",
+        "@wdio/spec-reporter": "^7.0.0",
+        "wdio-video-reporter": "^4.0.0"
+    },
+    "dependencies": {
+        "@wdio/allure-reporter": "^7.0.0",
+        "chai": "^4.0.2",
+        "chai-webdriverio": "^1.0.0",
+        "webdriverio": "^7.0.0"
+    }
+}
