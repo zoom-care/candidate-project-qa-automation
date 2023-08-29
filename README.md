@@ -7,9 +7,9 @@
 
 1. Verify Login (Negative):
    - Open the scheduling page (https://www.zoomcare.com/schedule).
-   - Verify that the page loads without errors.
-   - Check that the scheduler is visible and functional.
-   - Acceptance Criteria: The scheduling page loads properly with the scheduler displayed and functional.
+   - Verify that the page loads without errors, and click log in button.
+   - Attempt log in with bad credentials.
+   - Acceptance Criteria: Log in should fail, and a notice of failed log in should appear.
 
 2. Search Availability:
    - Select a specific date and time in the scheduler.
